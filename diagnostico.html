@@ -73,7 +73,7 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.1/echarts.min.js"></script>
+  <script src="shared/echarts.min.js"></script>
   <script src="shared/ui.js"></script>
   <script>
     (function () {
@@ -166,7 +166,7 @@
       document.getElementById('secciones').innerHTML = P.map(function (p, i) {
         var e = EST[p.estado];
         var cuerpo = p.grafico
-          ? '<div class="grid grid-cols-1 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-5"><div class="min-w-0"><div id="' + p.grafico + '" class="h-72 w-full"></div>' + (p.id === 'reales' ? '<div id="t-reales" class="mt-3 overflow-x-auto"></div>' : '') + '</div>' +
+          ? '<div class="grid grid-cols-1 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-5"><div class="min-w-0"><div id="' + p.grafico + '" class="h-72 w-full" style="height:288px;"></div>' + (p.id === 'reales' ? '<div id="t-reales" class="mt-3 overflow-x-auto"></div>' : '') + '</div>' +
             '<div><h3 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle">Por qué</h3><ul class="mt-2 space-y-2 text-[13.5px] text-slate-700 dark:text-slate-200">' + p.porque.map(function (x) { return '<li class="flex gap-2"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-sivax dark:bg-sivax-tint shrink-0"></span><span>' + x + '</span></li>'; }).join('') + '</ul>' +
             '<a href="' + p.accion[1] + '" class="mt-4 inline-flex btn-sivax px-3.5 py-2 rounded-lg text-[13px] font-semibold">' + p.accion[0] + ' →</a></div></div>'
           : '<div id="ayudar-cuerpo"></div>';
@@ -213,13 +213,13 @@
         '</tbody></table></div>' +
         '<div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-5">' +
           '<div><h3 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle">Biblioteca de buenas prácticas</h3>' +
-          '<p class="text-[13px] sx-muted mt-1">El asistente lee estos documentos dentro de la institución y los cita cuando recomienda algo.</p>' +
+          '<p class="text-[13px] sx-muted mt-1">Sivax es una inteligencia artificial cerrada, entrenada con los datos y documentos propios de la institución para responder preguntas de la institución sin enviar información fuera.</p>' +
           '<ul class="mt-3 divide-y divide-slate-200 dark:divide-white/10 border border-slate-200 dark:border-white/10 rounded-lg text-[13px]">' +
           DOCS.map(function (d) { var ok = d[2] === 'Indexado'; return '<li class="flex items-center justify-between gap-2 px-3 py-2"><span class="min-w-0"><span class="block text-slate-900 dark:text-white truncate">' + d[0] + '</span><span class="block text-[11.5px] sx-subtle">' + d[1] + '</span></span><span class="shrink-0 text-[11px] font-semibold px-1.5 py-0.5 rounded ' + (ok ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300' : 'bg-slate-100 dark:bg-white/10 sx-muted') + '">' + d[2] + '</span></li>'; }).join('') +
           '</ul><button type="button" id="subir" class="mt-2 w-full px-3 py-2.5 rounded-lg border border-dashed border-slate-300 dark:border-white/20 text-[13px] font-semibold sx-brand-text hover:bg-slate-50 dark:hover:bg-white/5">Agregar documento (PDF o Word)</button></div>' +
-          '<div><h3 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle">Cómo aprende el asistente</h3>' +
+          '<div><h3 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle">Cómo aprende la IA cerrada de Sivax</h3>' +
           '<ol class="mt-3 space-y-3 text-[13.5px]">' +
-            '<li><p class="font-semibold text-slate-900 dark:text-white">1. Lee las guías</p><p class="sx-muted">Cada documento se divide en trozos y se guarda en la base de la institución. Al preguntar, busca los trozos que sirven y los cita.</p></li>' +
+            '<li><p class="font-semibold text-slate-900 dark:text-white">1. Entrenada solo con datos institucionales</p><p class="sx-muted">Sivax lee exclusivamente las guías, protocolos y registros de la institución dentro de su entorno cerrado. Al preguntar, busca la evidencia interna y la cita.</p></li>' +
             '<li><p class="font-semibold text-slate-900 dark:text-white">2. Mira qué pasó después</p><p class="sx-muted">Cada atención queda unida a lo que pasó 4 semanas después: si volvió a clases, si subió la nota, si sigue matriculado.</p></li>' +
             '<li><p class="font-semibold text-slate-900 dark:text-white">3. Recomienda y explica</p><p class="sx-muted">Para cada caso propone la acción con mejor resultado aquí, dice en qué se basa y avisa cuando hay pocos casos para estar seguro.</p></li>' +
           '</ol></div>' +
@@ -317,6 +317,7 @@
       }
       window.addEventListener('sivax:theme', dibujar);
       window.addEventListener('resize', function () { charts.forEach(function (x) { x.resize(); }); });
+      window.addEventListener('load', dibujar);
       window.SIVAX_UI.initTheme();
       dibujar();
     })();

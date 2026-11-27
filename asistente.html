@@ -41,7 +41,7 @@
         <div class="flex items-center gap-2 text-xs min-w-0">
           <a href="inicio.html" class="lg:hidden w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs shrink-0" aria-label="Inicio">S</a>
           <span class="font-display font-semibold text-slate-900 dark:text-white truncate">Preguntar a Sivax</span>
-          <span class="hidden md:inline text-[11px] sx-subtle">El asistente corre dentro de la institución: los datos no salen a internet.</span>
+          <span class="hidden md:inline text-[11px] sx-subtle">Inteligencia artificial cerrada · entrenada con datos de la institución</span>
         </div>
         <button type="button" data-toggle-theme aria-label="Cambiar tema" class="inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-slate-700 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-white/10">
           <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
@@ -54,6 +54,10 @@
       <main class="flex-1 grid grid-cols-1 xl:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] min-h-0">
         <!-- Conversacion -->
         <section class="flex flex-col min-w-0 border-b xl:border-b-0 xl:border-r border-slate-200 dark:border-white/10" aria-label="Conversación">
+          <div class="px-4 lg:px-6 py-3 bg-sivax/[0.045] dark:bg-white/[0.04] border-b border-sivax/15 dark:border-white/10 flex items-start gap-2.5 text-[12.5px]">
+            <svg class="w-4 h-4 sx-brand-text shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+            <p class="sx-muted leading-snug"><strong class="text-slate-900 dark:text-white">Sivax es una inteligencia artificial cerrada</strong>, entrenada exclusivamente con datos de la institución para responder a preguntas de la institución. Los datos no salen a internet ni se comparten con modelos externos.</p>
+          </div>
           <div id="chat" class="flex-1 p-4 lg:p-6 space-y-4 overflow-y-auto" aria-live="polite"></div>
           <div class="p-3 lg:p-4 border-t border-slate-200 dark:border-white/10 bg-white dark:bg-sivax-darksurface space-y-2.5">
             <div id="chips" class="flex gap-2 overflow-x-auto pb-1"></div>
@@ -230,7 +234,7 @@
         toast.classList.remove('hidden'); clearTimeout(toast._t); toast._t = setTimeout(function () { toast.classList.add('hidden'); }, 4000);
       });
 
-      burbujaSivax('Hola, Andrea. Pregúntame lo que necesites sobre tus estudiantes en palabras simples. Te respondo y te dejo la planilla en Excel con cada columna explicada.');
+      burbujaSivax('Hola, Andrea. Soy <strong>Sivax</strong>, una inteligencia artificial cerrada entrenada exclusivamente con los datos de la institución para responder a preguntas de la institución. Pregúntame en palabras simples y te respondo junto con la planilla en Excel explicada.');
       var q = new URLSearchParams(location.search).get('q');
       responder(q || RESPUESTAS[0].pregunta);
       window.SIVAX_UI.initTheme();
