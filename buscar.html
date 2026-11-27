@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscar estudiante · Sivax</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="shared/tailwind-config.js"></script>
+  <link rel="stylesheet" href="shared/tokens.css" />
+</head>
+<body class="pb-16 lg:pb-0 bg-sivax-lightbg text-slate-900 dark:bg-sivax-darkbg dark:text-slate-100 min-h-screen">
+  <div class="flex min-h-screen">
+    <aside class="hidden lg:flex lg:w-56 lg:flex-col bg-white dark:bg-sivax-darksurface text-slate-700 border-r border-slate-200 dark:border-white/10 border-t-[3px] border-t-sivax shrink-0 sticky top-0 h-screen">
+      <div class="h-12 px-4 flex items-center border-b border-slate-200 dark:border-white/10">
+        <a href="inicio.html" class="flex items-center gap-2 min-w-0">
+          <span class="w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs">S</span>
+          <span class="leading-tight min-w-0"><span class="block font-display font-semibold text-[13px] text-slate-900 dark:text-white truncate">Sivax Retención</span><span class="block text-[10.5px] text-slate-500 dark:text-slate-400 truncate">Sede Norte · Sede Sur</span></span>
+        </a>
+      </div>
+      <nav class="flex-1 px-2.5 py-3 space-y-5 text-[12.5px]" aria-label="Navegación principal">
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Mi trabajo</p>
+          <ul class="space-y-0.5"><li><a href="inicio.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</span></a></li><li><a href="diagnostico.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg>Cómo vamos</span></a></li><li><a href="buscar.html" aria-current="page" class="flex items-center justify-between px-2.5 py-1.5 rounded relative bg-sivax/[0.07] dark:bg-white/10 text-sivax dark:text-white font-semibold before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-[3px] before:rounded-r before:bg-sivax dark:before:bg-sivax-tint"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar estudiante</span></a></li><li><a href="asistente.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar a Sivax</span></a></li><li><a href="lista.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista semanal</span><span id="sidebar-pending" class="font-mono-num text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 dark:bg-red-500/20 dark:text-red-200 dark:border-red-400/30">5</span></a></li><li><a href="panel.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16v-5m5 5V8m5 8v-3"/></svg>Panel ejecutivo</span></a></li><li><a href="campus3d.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>Campus 3D</span></a></li><li><a href="ficha.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Ficha 360°</span></a></li></ul>
+        </div>
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Más módulos</p>
+          <ul class="space-y-0.5 text-slate-400 dark:text-slate-500" title="Se diseñan en la siguiente entrega"><li class="px-2.5 py-1">Avance de llamadas</li><li class="px-2.5 py-1">Tutorías por sección</li><li class="px-2.5 py-1">Agenda y citas</li><li class="px-2.5 py-1">Tutores y apoyo</li><li class="px-2.5 py-1">Campañas y talleres</li><li class="px-2.5 py-1">Encuestas</li><li class="px-2.5 py-1">Re-matrícula</li></ul>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-slate-200 dark:border-white/10 text-[11px]">
+        <div class="font-semibold text-slate-900 dark:text-white truncate">Andrea Molina</div>
+        <div class="text-slate-500 dark:text-slate-400 truncate">Coordinación · datos de demostración</div>
+      </div>
+    </aside>
+    <div class="flex-1 flex flex-col min-w-0">
+      <header class="h-11 px-4 bg-white dark:bg-sivax-darksurface border-b border-slate-200 dark:border-white/10 flex items-center justify-between gap-2 sticky top-0 z-20">
+        <div class="flex items-center gap-2 text-xs min-w-0">
+          <a href="inicio.html" class="lg:hidden w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs shrink-0" aria-label="Inicio">S</a>
+          <span class="font-display font-semibold text-slate-900 dark:text-white truncate">Buscar estudiante</span>
+          <span class="hidden sm:inline font-mono-num text-[11px] sx-subtle">Datos al 22-11-2026</span>
+        </div>
+        <button type="button" data-toggle-theme aria-label="Cambiar tema" class="inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-slate-700 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-white/10">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <span data-theme-label class="hidden sm:inline">Modo oscuro</span>
+        </button>
+      </header>
+
+      <main class="flex-1 w-full max-w-[1480px] mx-auto p-4 lg:p-6 space-y-4">
+        <div>
+          <h1 class="font-display text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">Buscar estudiante</h1>
+          <p class="text-[13px] sx-muted mt-1">Escribe un nombre o un RUT. Haz clic en el nombre para ver toda su situación en la ficha 360°.</p>
+        </div>
+
+        <div class="bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg p-3 flex flex-wrap items-center gap-2">
+          <div class="relative flex-1 min-w-[220px]">
+            <svg class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            <label for="b-q" class="sr-only">Nombre o RUT</label>
+            <input id="b-q" type="search" placeholder="Nombre, apellido o RUT" class="w-full pl-9 pr-3 py-2.5 rounded-md border border-slate-300 dark:border-white/15 bg-white dark:bg-sivax-darkbg text-[15px] text-slate-900 dark:text-white placeholder:text-slate-400" />
+          </div>
+          <select id="b-sede" aria-label="Sede" class="px-2.5 py-2.5 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-[13px]"><option value="">Todas las sedes</option><option>Sede Norte</option><option>Sede Sur</option></select>
+          <select id="b-riesgo" aria-label="Riesgo" class="px-2.5 py-2.5 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-[13px]"><option value="">Todos los riesgos</option><option value="critico">Crítico</option><option value="alto">Alto</option><option value="medio">Medio</option><option value="bajo">Bajo</option><option value="sin_riesgo">Sin riesgo</option><option value="sin_datos">Sin datos</option></select>
+          <select id="b-sit" aria-label="Situación" class="px-2.5 py-2.5 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-[13px]"><option value="">Vigentes y retirados</option><option>Vigente</option><option>Retracto</option></select>
+          <label class="inline-flex items-center gap-2 text-[13px] px-2 text-slate-700 dark:text-slate-200"><input id="b-lista" type="checkbox" class="w-4 h-4 accent-[#2d1b8f]" />Solo lista de la semana</label>
+          <span id="b-cuenta" class="ml-auto font-mono-num text-[12px] sx-muted"></span>
+        </div>
+
+        <details id="glosario" class="bg-sivax/[0.035] dark:bg-white/[0.04] border border-sivax/15 dark:border-white/10 rounded-lg" open>
+          <summary class="cursor-pointer px-4 py-2.5 text-[13px] font-semibold sx-brand-text">Qué significa cada columna</summary>
+          <dl class="px-4 pb-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-2.5 text-[13px]">
+            <div><dt class="font-semibold text-slate-900 dark:text-white">Situación</dt><dd class="sx-muted">Vigente, o retracto con su fecha. El retracto se clasifica solo: antes de clases, marzo–abril o después de abril.</dd></div>
+            <div><dt class="font-semibold text-slate-900 dark:text-white">Riesgo</dt><dd class="sx-muted">Crítico, alto, medio o bajo. Junta la asistencia real, las notas ingresadas y la probabilidad que calcula el modelo.</dd></div>
+            <div><dt class="font-semibold text-slate-900 dark:text-white">Por qué</dt><dd class="sx-muted">El motivo en palabras simples, con las cifras que lo explican.</dd></div>
+            <div><dt class="font-semibold text-slate-900 dark:text-white">Qué hacer</dt><dd class="sx-muted">La acción sugerida para esta semana: contactar, invitar a tutoría, revisar o nada.</dd></div>
+            <div><dt class="font-semibold text-slate-900 dark:text-white">Asistencia</dt><dd class="sx-muted">Clases asistidas sobre las clases que el docente registró. Si hay menos de 4 clases registradas, aparece «Sin datos».</dd></div>
+            <div><dt class="font-semibold text-slate-900 dark:text-white">Gestión</dt><dd class="sx-muted">Pendiente si nadie lo ha contactado esta semana; Gestionado si ya tiene una atención en la bitácora.</dd></div>
+          </dl>
+        </details>
+
+        <div id="b-tarjetas" class="md:hidden space-y-2.5"></div>
+        <div class="hidden md:block bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-[13px]">
+              <thead>
+                <tr class="border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-sivax-darkelevated/60 text-[11px] font-semibold uppercase tracking-wider sx-subtle">
+                  <th class="py-2.5 pl-4 pr-2">Estudiante</th>
+                  <th class="py-2.5 px-2.5">Carrera y sede</th>
+                  <th class="py-2.5 px-2.5">Situación</th>
+                  <th class="py-2.5 px-2.5">Riesgo</th>
+                  <th class="py-2.5 px-2.5 min-w-[240px]">Por qué</th>
+                  <th class="py-2.5 px-2.5 min-w-[180px]">Qué hacer</th>
+                  <th class="py-2.5 px-2.5 text-right">Asistencia</th>
+                  <th class="py-2.5 px-2.5 text-right">Promedio</th>
+                  <th class="py-2.5 pl-2.5 pr-4">Gestión</th>
+                </tr>
+              </thead>
+              <tbody id="b-filas" class="divide-y divide-slate-200/80 dark:divide-white/10"></tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="shared/data.js"></script>
+  <script src="shared/estudiantes.js"></script>
+  <script src="shared/ui.js"></script>
+  <script>
+    (function () {
+      function num(re, s) { var m = s.match(re); return m ? m : null; }
+      var lista = window.SIVAX_MOCK.listaSemanal.map(function (r) {
+        var f = num(/Faltó a (\d+) de (\d+)/, r.porQue);
+        var p = num(/promedio (\d,\d)/, r.porQue);
+        return {
+          id: r.id, nombre: r.nombre, rut: r.rut, carrera: r.carrera, sede: r.sede, jornada: r.jornada, situacion: 'Vigente',
+          riesgo: r.riesgo, riesgoKey: r.riesgoKey, porQue: r.porQue, queHacer: r.queHacer,
+          asistencia: f ? (100 * (1 - f[1] / f[2])) : null, promedio: p ? p[1] : '—',
+          gestion: r.estadoGestion === 'gestionado' ? 'Gestionado' : 'Pendiente', enLista: r.enListaSemana
+        };
+      });
+      var todos = lista.concat(window.SIVAX_DIRECTORIO.map(function (r) { return Object.assign({ enLista: false }, r); }));
+      var ORDEN = { critico: 0, alto: 1, medio: 2, bajo: 3, sin_datos: 4, sin_riesgo: 5 };
+      todos.sort(function (a, b) { return (ORDEN[a.riesgoKey] - ORDEN[b.riesgoKey]) || a.nombre.localeCompare(b.nombre); });
+
+      var el = function (id) { return document.getElementById(id); };
+      var q = el('b-q');
+      var params = new URLSearchParams(location.search);
+      if (params.get('q')) q.value = params.get('q');
+
+      function sinTildes(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+      function pct(v) { return v == null ? 'Sin datos' : v.toFixed(1).replace('.', ',') + ' %'; }
+      function badge(r) {
+        if (r.riesgoKey === 'sin_riesgo') return '<span class="whitespace-nowrap text-[11px] font-semibold px-2 py-0.5 rounded bg-slate-100 dark:bg-white/10 text-slate-600 dark:text-slate-300 border border-slate-300/60 dark:border-white/15">Sin riesgo</span>';
+        if (r.riesgoKey === 'sin_datos') return '<span class="whitespace-nowrap text-[11px] font-semibold px-2 py-0.5 rounded border border-dashed border-slate-300 dark:border-white/20 sx-muted">' + (r.riesgo === '—' ? 'No aplica' : 'Sin datos') + '</span>';
+        return '<span class="text-[11px] font-semibold px-2 py-0.5 rounded ' + window.SIVAX_UI.riskBadgeClass(r.riesgoKey) + '">' + r.riesgo + '</span>';
+      }
+      function gestion(g) {
+        var c = g === 'Pendiente' ? 'bg-amber-500/15 text-amber-800 dark:text-amber-300' : g === 'Gestionado' ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300' : 'bg-slate-100 dark:bg-white/10 sx-muted';
+        return '<span class="text-[11px] font-semibold px-1.5 py-0.5 rounded whitespace-nowrap ' + c + '">' + g + '</span>';
+      }
+      function enlace(r) { return window.SIVAX_MOCK.fichas[r.id] ? 'ficha.html?id=' + r.id : 'ficha.html'; }
+
+      function pintar() {
+        var t = sinTildes(q.value.trim()), tr = t.replace(/[.\s-]/g, '');
+        var f = todos.filter(function (r) {
+          if (el('b-sede').value && r.sede !== el('b-sede').value) return false;
+          if (el('b-riesgo').value && r.riesgoKey !== el('b-riesgo').value) return false;
+          if (el('b-sit').value && r.situacion !== el('b-sit').value) return false;
+          if (el('b-lista').checked && !r.enLista) return false;
+          if (t && sinTildes(r.nombre + ' ' + r.carrera).indexOf(t) === -1 && r.rut.replace(/[.\-]/g, '').toLowerCase().indexOf(tr) === -1) return false;
+          return true;
+        });
+        el('b-cuenta').textContent = f.length + ' de ' + todos.length + ' estudiantes';
+        var vacio = '<p class="py-10 text-center text-[13px] sx-muted">Nadie coincide con esta búsqueda. Prueba solo con el apellido o quita un filtro.</p>';
+        el('b-filas').innerHTML = f.length ? f.map(function (r) {
+          return '<tr class="align-top hover:bg-slate-50/90 dark:hover:bg-white/[0.03]">' +
+            '<td class="py-2.5 pl-4 pr-2"><a href="' + enlace(r) + '" class="font-semibold text-slate-900 dark:text-white hover:underline">' + r.nombre + '</a><div class="font-mono-num text-[11px] sx-subtle">' + r.rut + '</div></td>' +
+            '<td class="py-2.5 px-2.5"><div class="text-slate-800 dark:text-slate-200">' + r.carrera + '</div><div class="text-[11.5px] sx-subtle">' + r.sede + ' · ' + r.jornada + '</div></td>' +
+            '<td class="py-2.5 px-2.5 whitespace-nowrap ' + (r.situacion === 'Vigente' ? 'text-emerald-700 dark:text-emerald-300' : 'sx-muted') + '">' + r.situacion + '</td>' +
+            '<td class="py-2.5 px-2.5">' + badge(r) + '</td>' +
+            '<td class="py-2.5 px-2.5 sx-muted leading-snug">' + r.porQue + '</td>' +
+            '<td class="py-2.5 px-2.5 text-slate-800 dark:text-slate-100 leading-snug">' + r.queHacer + '</td>' +
+            '<td class="py-2.5 px-2.5 text-right font-mono-num whitespace-nowrap">' + pct(r.asistencia) + '</td>' +
+            '<td class="py-2.5 px-2.5 text-right font-mono-num">' + r.promedio + '</td>' +
+            '<td class="py-2.5 pl-2.5 pr-4">' + gestion(r.gestion) + '</td></tr>';
+        }).join('') : '<tr><td colspan="9">' + vacio + '</td></tr>';
+        el('b-tarjetas').innerHTML = f.length ? f.map(function (r) {
+          return '<a href="' + enlace(r) + '" class="block bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg p-3.5 text-[13px]">' +
+            '<div class="flex items-center justify-between gap-2"><span class="font-semibold text-[14px] text-slate-900 dark:text-white">' + r.nombre + '</span>' + badge(r) + '</div>' +
+            '<div class="text-[12px] sx-subtle mt-0.5"><span class="font-mono-num">' + r.rut + '</span> · ' + r.carrera + ' · ' + r.sede + '</div>' +
+            '<div class="mt-2 text-slate-800 dark:text-slate-100">' + r.queHacer + '</div>' +
+            '<div class="mt-1 sx-muted">' + r.porQue + '</div>' +
+            '<div class="mt-2 flex items-center justify-between"><span class="font-mono-num text-[12px] sx-muted">Asistencia ' + pct(r.asistencia) + ' · Prom. ' + r.promedio + '</span>' + gestion(r.gestion) + '</div></a>';
+        }).join('') : vacio;
+      }
+
+      ['b-q', 'b-sede', 'b-riesgo', 'b-sit', 'b-lista'].forEach(function (id) {
+        el(id).addEventListener('input', pintar); el(id).addEventListener('change', pintar);
+      });
+      try { if (localStorage.getItem('sivax-glosario') === 'cerrado') el('glosario').open = false; } catch (e) {}
+      el('glosario').addEventListener('toggle', function () { try { localStorage.setItem('sivax-glosario', el('glosario').open ? 'abierto' : 'cerrado'); } catch (e) {} });
+      window.SIVAX_UI.initTheme();
+      pintar();
+    })();
+  </script>
+
+<nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 flex bg-white/95 dark:bg-sivax-darksurface/95 backdrop-blur border-t border-slate-200 dark:border-white/10" aria-label="Navegación móvil"><a href="inicio.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a><a href="buscar.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] text-sivax dark:text-white font-semibold"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a><a href="asistente.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar</a><a href="lista.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista</a></nav>
+</body>
+</html>

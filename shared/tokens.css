@@ -1,0 +1,93 @@
+/* Sivax Retencion — Tokens visuales y base tipografica (Claro y Oscuro) */
+:root {
+  color-scheme: light;
+  --sivax-brand: #2d1b8f;
+  --sivax-brand-hover: #231470;
+  --sivax-brand-soft: rgba(45, 27, 143, 0.08);
+  --sivax-brand-border: rgba(45, 27, 143, 0.22);
+  --sivax-bg: #f6f7fa;
+  --sivax-surface: #ffffff;
+  --sivax-surface-alt: #f1f3f8;
+  --sivax-border: rgba(15, 23, 42, 0.09);
+  --sivax-border-strong: rgba(15, 23, 42, 0.16);
+  --sivax-text: #111322;
+  --sivax-text-muted: #52586c;
+  --sivax-text-subtle: #7c8398;
+}
+
+html.dark {
+  color-scheme: dark;
+  --sivax-brand: #8b7cf6;
+  --sivax-brand-hover: #7a68f2;
+  --sivax-brand-soft: rgba(139, 124, 246, 0.16);
+  --sivax-brand-border: rgba(139, 124, 246, 0.34);
+  --sivax-bg: #160a3a;
+  --sivax-surface: #1e104b;
+  --sivax-surface-alt: #26165c;
+  --sivax-border: rgba(255, 255, 255, 0.10);
+  --sivax-border-strong: rgba(255, 255, 255, 0.18);
+  --sivax-text: #f3f2fb;
+  --sivax-text-muted: #b3add4;
+  --sivax-text-subtle: #8981b3;
+}
+
+html, body {
+  background-color: var(--sivax-bg);
+  color: var(--sivax-text);
+  font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Schibsted Grotesk', system-ui, sans-serif;
+}
+
+.font-mono-num {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Primary button guaranteed contrast in both themes */
+.btn-sivax {
+  background-color: #2d1b8f;
+  color: #ffffff;
+  border: 1px solid rgba(45, 27, 143, 0.9);
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+.btn-sivax:hover {
+  background-color: #231470;
+}
+html.dark .btn-sivax {
+  background-color: #5b46e8;
+  border-color: #7c6bf2;
+  color: #ffffff;
+}
+html.dark .btn-sivax:hover {
+  background-color: #4c38d6;
+}
+
+/* Crisp native select styling in dark mode */
+select option {
+  background-color: var(--sivax-surface);
+  color: var(--sivax-text);
+}
+
+/* Subtle surface utilities tied to tokens */
+.sx-surface {
+  background-color: var(--sivax-surface);
+  border-color: var(--sivax-border);
+}
+.sx-surface-alt {
+  background-color: var(--sivax-surface-alt);
+  border-color: var(--sivax-border);
+}
+.sx-muted { color: var(--sivax-text-muted); }
+.sx-subtle { color: var(--sivax-text-subtle); }
+.sx-brand-text { color: var(--sivax-brand); }
+.sx-divider { border-color: var(--sivax-border); }
+
+/* Focus rings */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--sivax-brand);
+  outline-offset: 2px;
+}

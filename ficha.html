@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ficha 360° · Sivax</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="shared/tailwind-config.js"></script>
+  <link rel="stylesheet" href="shared/tokens.css" />
+  <style>
+    [data-tab-btn].is-active {
+      color: var(--sivax-brand);
+      border-bottom-color: var(--sivax-brand);
+    }
+  </style>
+</head>
+<body class="pb-16 lg:pb-0 bg-sivax-lightbg text-slate-900 dark:bg-sivax-darkbg dark:text-slate-100 min-h-screen">
+  <div class="flex min-h-screen">
+    <!-- Sidebar V2: Linear Dark Violet Rail -->
+    <aside class="hidden lg:flex lg:w-56 lg:flex-col bg-white dark:bg-sivax-darksurface text-slate-700 border-r border-slate-200 dark:border-white/10 border-t-[3px] border-t-sivax shrink-0 sticky top-0 h-screen">
+      <div class="h-12 px-4 flex items-center border-b border-slate-200 dark:border-white/10">
+        <a href="inicio.html" class="flex items-center gap-2 min-w-0">
+          <span class="w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs">S</span>
+          <span class="leading-tight min-w-0"><span class="block font-display font-semibold text-[13px] text-slate-900 dark:text-white truncate">Sivax Retención</span><span class="block text-[10.5px] text-slate-500 dark:text-slate-400 truncate">Sede Norte · Sede Sur</span></span>
+        </a>
+      </div>
+      <nav class="flex-1 px-2.5 py-3 space-y-5 text-[12.5px]" aria-label="Navegación principal">
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Mi trabajo</p>
+          <ul class="space-y-0.5"><li><a href="inicio.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</span></a></li><li><a href="diagnostico.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg>Cómo vamos</span></a></li><li><a href="buscar.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar estudiante</span></a></li><li><a href="asistente.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar a Sivax</span></a></li><li><a href="lista.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista semanal</span><span id="sidebar-pending" class="font-mono-num text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 dark:bg-red-500/20 dark:text-red-200 dark:border-red-400/30">5</span></a></li><li><a href="panel.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16v-5m5 5V8m5 8v-3"/></svg>Panel ejecutivo</span></a></li><li><a href="campus3d.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>Campus 3D</span></a></li><li><a href="ficha.html" aria-current="page" class="flex items-center justify-between px-2.5 py-1.5 rounded relative bg-sivax/[0.07] dark:bg-white/10 text-sivax dark:text-white font-semibold before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-[3px] before:rounded-r before:bg-sivax dark:before:bg-sivax-tint"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Ficha 360°</span></a></li></ul>
+        </div>
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Más módulos</p>
+          <ul class="space-y-0.5 text-slate-400 dark:text-slate-500" title="Se diseñan en la siguiente entrega"><li class="px-2.5 py-1">Avance de llamadas</li><li class="px-2.5 py-1">Tutorías por sección</li><li class="px-2.5 py-1">Agenda y citas</li><li class="px-2.5 py-1">Tutores y apoyo</li><li class="px-2.5 py-1">Campañas y talleres</li><li class="px-2.5 py-1">Encuestas</li><li class="px-2.5 py-1">Re-matrícula</li></ul>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-slate-200 dark:border-white/10 text-[11px]">
+        <div class="font-semibold text-slate-900 dark:text-white truncate">Andrea Molina</div>
+        <div class="text-slate-500 dark:text-slate-400 truncate">Coordinación · datos de demostración</div>
+      </div>
+    </aside>
+
+    <!-- Main Issue + Inspector Split -->
+    <div class="flex-1 flex flex-col min-w-0">
+      <header class="h-11 px-4 bg-white dark:bg-sivax-darksurface border-b border-slate-200 dark:border-white/10 flex items-center justify-between gap-2 sticky top-0 z-20">
+        <div class="flex items-center gap-2 text-xs min-w-0">
+          <a href="lista.html" class="sx-muted hover:text-slate-900 dark:hover:text-white font-medium">Lista semanal</a>
+          <span class="sx-subtle">/</span>
+          <span id="crumb-name" class="font-display font-semibold text-slate-900 dark:text-white truncate"></span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <label for="student-switch" class="hidden sm:inline text-[11px] sx-muted">Cambiar caso:</label>
+          <select id="student-switch" aria-label="Seleccionar estudiante de demostración" class="px-2 py-1 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-xs font-medium text-slate-800 dark:text-slate-100">
+            <option value="est-101">Camila Rojas Paredes (P1 · Crítico)</option>
+            <option value="est-102">Matías Fuentes Contreras (P1 · Crítico)</option>
+            <option value="est-104">Sebastián Araya Muñoz (P2 · Alto)</option>
+          </select>
+
+          <button type="button" data-toggle-theme class="inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-slate-700 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-white/10">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+            <span data-theme-label class="hidden sm:inline">Modo oscuro</span>
+          </button>
+        </div>
+      </header>
+
+      <div id="ficha-toast" class="hidden fixed bottom-5 right-5 z-50 px-4 py-2.5 rounded-lg bg-slate-900 dark:bg-sivax-tint text-white dark:text-slate-950 text-xs font-semibold shadow-lg"></div>
+
+      <main class="flex-1 grid grid-cols-1 xl:grid-cols-12 min-w-0">
+        <!-- Left 8 cols: Student Header + 3 Tabs -->
+        <section class="xl:col-span-8 p-4 lg:p-5 space-y-4 min-w-0">
+          <!-- Compact Identity Header -->
+          <div id="student-header" class="bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg p-4"></div>
+
+          <!-- Underline Tabs -->
+          <div class="bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg overflow-hidden">
+            <div class="px-4 border-b border-slate-200 dark:border-white/10 flex items-center gap-5 text-xs font-semibold" role="tablist">
+              <button type="button" role="tab" aria-selected="true" data-tab-btn="riesgo" class="is-active py-3 border-b-2 border-transparent sx-muted hover:text-slate-900 dark:hover:text-white transition-colors">
+                Riesgo y acción
+              </button>
+              <button type="button" role="tab" aria-selected="false" data-tab-btn="avance" class="py-3 border-b-2 border-transparent sx-muted hover:text-slate-900 dark:hover:text-white transition-colors">
+                Avance curricular
+              </button>
+              <button type="button" role="tab" aria-selected="false" data-tab-btn="bitacora" class="py-3 border-b-2 border-transparent sx-muted hover:text-slate-900 dark:hover:text-white transition-colors">
+                Bitácora (<span id="bitacora-count" class="font-mono-num">0</span>)
+              </button>
+            </div>
+
+            <div class="p-4">
+              <div data-tab-panel="riesgo" id="panel-riesgo" class="space-y-4"></div>
+              <div data-tab-panel="avance" id="panel-avance" class="hidden space-y-4"></div>
+              <div data-tab-panel="bitacora" id="panel-bitacora" class="hidden space-y-3"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right 4 cols: Persistent Linear-style Inspector + Quick Actions -->
+        <aside class="xl:col-span-4 border-t xl:border-t-0 xl:border-l border-slate-200 dark:border-white/10 bg-white dark:bg-sivax-darksurface p-4 lg:p-5 space-y-5">
+          <div>
+            <h2 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle mb-2.5">Propiedades del caso</h2>
+            <dl id="inspector-props" class="divide-y divide-slate-200/70 dark:divide-white/10 text-xs"></dl>
+          </div>
+
+          <div class="pt-3 border-t border-slate-200 dark:border-white/10">
+            <h2 class="font-display font-semibold text-sm text-slate-900 dark:text-white mb-2.5">Registrar atención rápida</h2>
+            <form id="form-atencion-rapida" class="space-y-2.5 text-xs">
+              <div class="grid grid-cols-2 gap-2">
+                <select name="tipo" aria-label="Canal" class="rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkelevated px-2 py-1.5 text-slate-900 dark:text-white">
+                  <option>Llamada telefónica</option>
+                  <option>Atención presencial</option>
+                  <option>Videollamada</option>
+                  <option>Correo institucional</option>
+                </select>
+                <select name="estado_contacto" aria-label="Resultado" class="rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkelevated px-2 py-1.5 text-slate-900 dark:text-white">
+                  <option>Contacto efectivo</option>
+                  <option>No contesta</option>
+                  <option>Número erróneo</option>
+                </select>
+              </div>
+              <select name="estado_caso" aria-label="Estado del caso" class="w-full rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkelevated px-2 py-1.5 text-slate-900 dark:text-white">
+                <option>Abierto</option>
+                <option>En seguimiento</option>
+                <option>Derivado a tutoría</option>
+                <option>Cerrado</option>
+              </select>
+              <textarea name="nota" rows="2" required placeholder="Resumen de la conversación y acuerdo..." class="w-full rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkbg px-2.5 py-1.5 text-slate-900 dark:text-white placeholder:text-slate-400"></textarea>
+              <button type="submit" class="btn-sivax w-full py-1.5 rounded-md font-semibold">Guardar en bitácora</button>
+            </form>
+          </div>
+
+          <div class="pt-3 border-t border-slate-200 dark:border-white/10">
+            <h2 class="font-display font-semibold text-sm text-slate-900 dark:text-white mb-2.5">Agendar cita o tutoría</h2>
+            <form id="form-cita-rapida" class="space-y-2.5 text-xs">
+              <div class="grid grid-cols-2 gap-2">
+                <input name="fecha" type="text" inputmode="numeric" aria-label="Fecha" placeholder="dd-mm-aaaa" value="26-11-2026" class="rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkbg px-2 py-1.5 font-mono-num text-slate-900 dark:text-white" />
+                <input name="hora" type="text" inputmode="numeric" aria-label="Hora" placeholder="hh:mm" value="10:30" class="rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkbg px-2 py-1.5 font-mono-num text-slate-900 dark:text-white" />
+              </div>
+              <input name="motivo" type="text" required placeholder="Motivo (ej. Reforzamiento INF-201)" class="w-full rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkbg px-2.5 py-1.5 text-slate-900 dark:text-white placeholder:text-slate-400" />
+              <button type="submit" class="w-full py-1.5 rounded-md font-semibold border border-slate-300 dark:border-white/20 text-slate-800 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-white/10">Agendar cita</button>
+            </form>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <script src="shared/data.js"></script>
+  <script src="shared/ui.js"></script>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const initialId = params.get('id');
+      let currentId = window.SIVAX_MOCK.fichas[initialId] ? initialId : 'est-101';
+      const switcher = document.getElementById('student-switch');
+      switcher.value = currentId;
+
+      function getCurrent() {
+        return window.SIVAX_MOCK.fichas[currentId];
+      }
+
+      function renderTimeline() {
+        const st = getCurrent();
+        document.getElementById('bitacora-count').textContent = st.bitacora.length;
+        document.getElementById('panel-bitacora').innerHTML = st.bitacora.map(function (b) {
+          const isCita = b.categoria === 'cita';
+          return (
+            '<div class="flex gap-3 p-3 rounded-md border border-slate-200/80 dark:border-white/10 bg-slate-50/70 dark:bg-sivax-darkelevated/50 text-xs">' +
+              '<div class="w-20 shrink-0 font-mono-num text-[11px] sx-subtle">' +
+                '<div>' + b.fecha.split('-').reverse().join('-') + '</div>' +
+                '<div>' + b.hora + '</div>' +
+              '</div>' +
+              '<div class="flex-1 min-w-0">' +
+                '<div class="flex flex-wrap items-center gap-2">' +
+                  '<span class="font-semibold text-slate-900 dark:text-white">' + b.tipo + '</span>' +
+                  '<span class="text-[10.5px] font-semibold px-1.5 py-0.5 rounded ' + (isCita ? 'bg-sivax/10 text-sivax dark:bg-sivax-tint/20 dark:text-indigo-200' : 'bg-slate-200/80 dark:bg-white/10 text-slate-700 dark:text-slate-200') + '">' + b.estadoContacto + '</span>' +
+                  '<span class="text-[11px] sx-subtle">Resp. ' + b.responsable + '</span>' +
+                '</div>' +
+                '<p class="sx-muted mt-1 leading-relaxed">' + b.nota + '</p>' +
+              '</div>' +
+            '</div>'
+          );
+        }).join('');
+      }
+
+      function renderStudent() {
+        const st = getCurrent();
+        const pb = window.SIVAX_UI.priorityBadge(st.prioridad);
+        const rb = window.SIVAX_UI.riskBadgeClass(st.riesgoKey);
+        const rd = window.SIVAX_UI.riskDotClass(st.riesgoKey);
+
+        document.getElementById('crumb-name').textContent = st.nombre;
+
+        document.getElementById('student-header').innerHTML =
+          '<div class="flex flex-wrap items-start justify-between gap-3">' +
+            '<div class="flex items-center gap-3">' +
+              '<div class="w-10 h-10 rounded-lg bg-sivax/10 dark:bg-sivax-tint/20 text-sivax dark:text-indigo-200 font-display font-bold text-sm flex items-center justify-center shrink-0">' + st.iniciales + '</div>' +
+              '<div>' +
+                '<div class="flex flex-wrap items-center gap-2">' +
+                  '<h1 class="font-display font-semibold text-lg text-slate-900 dark:text-white leading-tight">' + st.nombre + '</h1>' +
+                  '<span class="font-mono-num text-[11px] sx-subtle">' + st.rut + '</span>' +
+                '</div>' +
+                '<p class="text-xs sx-muted mt-0.5">' + st.carrera + ' · ' + st.sede + ' · Jornada ' + st.jornada + ' · Ingreso <span class="font-mono-num">' + st.anioIngreso + '</span></p>' +
+              '</div>' +
+            '</div>' +
+            '<div class="flex flex-wrap items-center gap-1.5">' +
+              '<span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-2 py-0.5 rounded ' + rb + '"><span class="w-1.5 h-1.5 rounded-full ' + rd + '"></span>Riesgo ' + st.riesgoFinal + '</span>' +
+              '<span class="font-mono-num text-[11px] font-semibold px-2 py-0.5 rounded ' + pb.cls + '">' + st.prioridadTexto + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="mt-3 pt-3 border-t border-slate-200/80 dark:border-white/10 flex flex-wrap items-center gap-x-5 gap-y-1 text-[11.5px] sx-muted">' +
+            '<span>Tel. <strong class="font-mono-num text-slate-800 dark:text-slate-100">' + st.telefono + '</strong></span>' +
+            '<span>Correo <strong class="text-slate-800 dark:text-slate-100">' + st.correo + '</strong></span>' +
+            '<span>Estado <strong class="text-emerald-700 dark:text-emerald-300">' + st.estado + '</strong></span>' +
+          '</div>';
+
+        document.getElementById('inspector-props').innerHTML = [
+          ['Riesgo final', st.riesgoFinal + ' (' + st.probML + ' % modelo)'],
+          ['Prioridad', st.prioridadTexto],
+          ['Origen alerta', st.origenRiesgo],
+          ['Asistencia', st.nivelAsistencia],
+          ['Rendimiento', st.nivelNotas],
+          ['Tutor asignado', st.tutor],
+          ['Causal', st.causalEstado]
+        ].map(function (row) {
+          return '<div class="py-2 flex items-start justify-between gap-3"><dt class="sx-subtle shrink-0">' + row[0] + '</dt><dd class="text-right font-medium text-slate-800 dark:text-slate-100">' + row[1] + '</dd></div>';
+        }).join('');
+
+        document.getElementById('panel-riesgo').innerHTML =
+          '<div class="grid grid-cols-1 md:grid-cols-2 gap-3">' +
+            '<div class="p-3.5 rounded-md border border-sivax/25 dark:border-sivax-tint/35 bg-sivax/[0.04] dark:bg-sivax-tint/10">' +
+              '<div class="text-[10.5px] font-semibold uppercase tracking-wider sx-brand-text">Qué hacer</div>' +
+              '<p class="text-[13px] font-semibold text-slate-900 dark:text-white mt-1 leading-snug">' + st.queHacer + '</p>' +
+            '</div>' +
+            '<div class="p-3.5 rounded-md border border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-sivax-darkelevated/50">' +
+              '<div class="text-[10.5px] font-semibold uppercase tracking-wider sx-subtle">Por qué está en alerta</div>' +
+              '<p class="text-xs text-slate-700 dark:text-slate-200 mt-1 leading-relaxed">' + st.porQue + '</p>' +
+            '</div>' +
+          '</div>' +
+          '<div>' +
+            '<div class="flex items-center justify-between mb-2">' +
+              '<h3 class="font-display font-semibold text-xs uppercase tracking-wider sx-subtle">3 causas principales del modelo</h3>' +
+              '<span class="font-mono-num text-xs font-semibold text-slate-900 dark:text-white">Probabilidad estimada: ' + st.probML + ' %</span>' +
+            '</div>' +
+            '<div class="space-y-2.5">' +
+              st.causasML.map(function (c, i) {
+                const barCls = c.tipo === 'critico' ? 'bg-red-600 dark:bg-red-400' : c.tipo === 'alto' ? 'bg-orange-500 dark:bg-orange-400' : 'bg-amber-500 dark:bg-amber-400';
+                return (
+                  '<div class="p-3 rounded-md border border-slate-200/80 dark:border-white/10">' +
+                    '<div class="flex items-center justify-between gap-2 text-xs mb-1.5">' +
+                      '<span class="font-medium text-slate-900 dark:text-slate-100"><span class="font-mono-num sx-subtle mr-1.5">0' + (i + 1) + '</span>' + c.factor + '</span>' +
+                      '<span class="font-mono-num font-semibold text-red-700 dark:text-red-300 shrink-0">' + c.impacto + '</span>' +
+                    '</div>' +
+                    '<div class="h-1.5 w-full rounded-full bg-slate-100 dark:bg-white/10 overflow-hidden">' +
+                      '<div class="h-full rounded-full ' + barCls + '" style="width:' + c.peso + '%"></div>' +
+                    '</div>' +
+                  '</div>'
+                );
+              }).join('') +
+            '</div>' +
+          '</div>';
+
+        const rc = st.resumenCurricular;
+        document.getElementById('panel-avance').innerHTML =
+          '<div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-center">' +
+            [['Aprobados', rc.aprobados], ['En curso', rc.enCurso], ['Reprobados', rc.reprobados], ['Prom. hist.', rc.promedioHistorico], ['Asistencia', rc.asistenciaGlobal]].map(function (m) {
+              return '<div class="p-2.5 rounded-md border border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-sivax-darkelevated/50"><div class="font-mono-num text-sm font-semibold text-slate-900 dark:text-white">' + m[1] + '</div><div class="text-[10.5px] sx-subtle">' + m[0] + '</div></div>';
+            }).join('') +
+          '</div>' +
+          '<div class="overflow-x-auto border border-slate-200 dark:border-white/10 rounded-md">' +
+            '<table class="w-full text-left border-collapse text-xs">' +
+              '<thead><tr class="border-b border-slate-200 dark:border-white/10 bg-slate-50 dark:bg-sivax-darkelevated/60 text-[10.5px] uppercase tracking-wider sx-subtle">' +
+                '<th class="py-2 px-3">Módulo</th><th class="py-2 px-2">Evaluaciones</th><th class="py-2 px-2">Prom.</th><th class="py-2 px-2">Asistencia</th><th class="py-2 px-3">Acción sugerida</th>' +
+              '</tr></thead>' +
+              '<tbody class="divide-y divide-slate-200/80 dark:divide-white/10">' +
+                st.modulos.map(function (m) {
+                  const rbMod = window.SIVAX_UI.riskBadgeClass(m.riesgoKey);
+                  return (
+                    '<tr>' +
+                      '<td class="py-2.5 px-3">' +
+                        '<div class="flex items-center gap-1.5 flex-wrap">' +
+                          '<span class="font-mono-num text-[11px] font-semibold sx-brand-text">' + m.codigo + '</span>' +
+                          '<span class="font-semibold text-slate-900 dark:text-white">' + m.nombre + '</span>' +
+                          (m.alertaTutoria ? '<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-orange-500/15 text-orange-800 dark:text-orange-200 border border-orange-500/30">Tutoría</span>' : '') +
+                        '</div>' +
+                        '<div class="text-[10.5px] sx-subtle">' + m.seccion + ' · ' + m.estado + '</div>' +
+                      '</td>' +
+                      '<td class="py-2.5 px-2 font-mono-num text-[11px] sx-muted">' + m.evaluaciones + '</td>' +
+                      '<td class="py-2.5 px-2"><span class="font-mono-num text-[11px] font-semibold px-1.5 py-0.5 rounded ' + rbMod + '">' + m.promedio + '</span></td>' +
+                      '<td class="py-2.5 px-2 font-mono-num text-[11px]"><div>' + m.inasistencia + ' aus.</div><div class="text-[10px] sx-subtle">' + m.clases + '</div></td>' +
+                      '<td class="py-2.5 px-3 text-[11.5px] sx-muted">' + m.queHacer + '</td>' +
+                    '</tr>'
+                  );
+                }).join('') +
+              '</tbody>' +
+            '</table>' +
+          '</div>';
+
+        renderTimeline();
+      }
+
+      switcher.addEventListener('change', function () {
+        currentId = switcher.value;
+        renderStudent();
+      });
+
+      window.SIVAX_UI.initTheme();
+      window.SIVAX_UI.initTabs();
+      window.SIVAX_UI.initQuickForms(getCurrent, renderTimeline);
+      renderStudent();
+    })();
+  </script>
+<nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 flex bg-white/95 dark:bg-sivax-darksurface/95 backdrop-blur border-t border-slate-200 dark:border-white/10" aria-label="Navegación móvil"><a href="inicio.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a><a href="buscar.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a><a href="asistente.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar</a><a href="lista.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista</a></nav>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio · Sivax</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="shared/tailwind-config.js"></script>
+  <link rel="stylesheet" href="shared/tokens.css" />
+</head>
+<body class="pb-16 lg:pb-0 bg-sivax-lightbg text-slate-900 dark:bg-sivax-darkbg dark:text-slate-100 min-h-screen">
+  <div class="flex min-h-screen">
+    <aside class="hidden lg:flex lg:w-56 lg:flex-col bg-white dark:bg-sivax-darksurface text-slate-700 border-r border-slate-200 dark:border-white/10 border-t-[3px] border-t-sivax shrink-0 sticky top-0 h-screen">
+      <div class="h-12 px-4 flex items-center border-b border-slate-200 dark:border-white/10">
+        <a href="inicio.html" class="flex items-center gap-2 min-w-0">
+          <span class="w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs">S</span>
+          <span class="leading-tight min-w-0"><span class="block font-display font-semibold text-[13px] text-slate-900 dark:text-white truncate">Sivax Retención</span><span class="block text-[10.5px] text-slate-500 dark:text-slate-400 truncate">Sede Norte · Sede Sur</span></span>
+        </a>
+      </div>
+      <nav class="flex-1 px-2.5 py-3 space-y-5 text-[12.5px]" aria-label="Navegación principal">
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Mi trabajo</p>
+          <ul class="space-y-0.5"><li><a href="inicio.html" aria-current="page" class="flex items-center justify-between px-2.5 py-1.5 rounded relative bg-sivax/[0.07] dark:bg-white/10 text-sivax dark:text-white font-semibold before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-[3px] before:rounded-r before:bg-sivax dark:before:bg-sivax-tint"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</span></a></li><li><a href="diagnostico.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg>Cómo vamos</span></a></li><li><a href="buscar.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar estudiante</span></a></li><li><a href="asistente.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar a Sivax</span></a></li><li><a href="lista.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista semanal</span><span id="sidebar-pending" class="font-mono-num text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 dark:bg-red-500/20 dark:text-red-200 dark:border-red-400/30">5</span></a></li><li><a href="panel.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16v-5m5 5V8m5 8v-3"/></svg>Panel ejecutivo</span></a></li><li><a href="campus3d.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>Campus 3D</span></a></li><li><a href="ficha.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Ficha 360°</span></a></li></ul>
+        </div>
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Más módulos</p>
+          <ul class="space-y-0.5 text-slate-400 dark:text-slate-500" title="Se diseñan en la siguiente entrega"><li class="px-2.5 py-1">Avance de llamadas</li><li class="px-2.5 py-1">Tutorías por sección</li><li class="px-2.5 py-1">Agenda y citas</li><li class="px-2.5 py-1">Tutores y apoyo</li><li class="px-2.5 py-1">Campañas y talleres</li><li class="px-2.5 py-1">Encuestas</li><li class="px-2.5 py-1">Re-matrícula</li></ul>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-slate-200 dark:border-white/10 text-[11px]">
+        <div class="font-semibold text-slate-900 dark:text-white truncate">Andrea Molina</div>
+        <div class="text-slate-500 dark:text-slate-400 truncate">Coordinación · datos de demostración</div>
+      </div>
+    </aside>
+    <div class="flex-1 flex flex-col min-w-0">
+      <header class="h-11 px-4 bg-white dark:bg-sivax-darksurface border-b border-slate-200 dark:border-white/10 flex items-center justify-between gap-2 sticky top-0 z-20">
+        <div class="flex items-center gap-2 text-xs min-w-0">
+          <a href="inicio.html" class="lg:hidden w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs shrink-0" aria-label="Inicio">S</a>
+          <span class="font-display font-semibold text-slate-900 dark:text-white truncate">Inicio</span>
+          <span class="hidden sm:inline font-mono-num text-[11px] sx-subtle">Lunes 23-11-2026 · Sem. 47 · datos al 22-11</span>
+        </div>
+        <button type="button" data-toggle-theme aria-label="Cambiar tema" class="inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-slate-700 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-white/10">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <span data-theme-label class="hidden sm:inline">Modo oscuro</span>
+        </button>
+      </header>
+
+      <main class="flex-1 w-full max-w-[1120px] mx-auto px-4 lg:px-8 py-8 lg:py-12 space-y-10">
+        <!-- Pregunta principal -->
+        <section aria-labelledby="t-hoy">
+          <p class="text-sm sx-muted">Buenas noches, Andrea.</p>
+          <h1 id="t-hoy" class="font-display text-3xl lg:text-[40px] leading-tight font-semibold tracking-tight text-slate-900 dark:text-white mt-1">¿Qué quieres hacer hoy?</h1>
+
+          <!-- Barra unica: buscar o preguntar -->
+          <div class="mt-6 bg-white dark:bg-sivax-darksurface border border-slate-300/80 dark:border-white/15 rounded-xl shadow-[0_1px_2px_rgba(15,23,42,.04),0_8px_24px_-12px_rgba(45,27,143,.18)] focus-within:border-sivax dark:focus-within:border-sivax-tint">
+            <div class="flex items-center gap-1 px-2 pt-2" role="tablist" aria-label="Modo">
+              <button type="button" role="tab" id="m-buscar" data-modo="buscar" class="modo px-3 py-1.5 rounded-md text-[13px]">
+                Buscar un estudiante
+              </button>
+              <button type="button" role="tab" id="m-preguntar" data-modo="preguntar" class="modo px-3 py-1.5 rounded-md text-[13px]">
+                Preguntar a Sivax
+              </button>
+              <span class="ml-auto hidden md:inline text-[11px] sx-subtle pr-2">Atajo: tecla <kbd class="font-mono-num px-1 py-px rounded border border-slate-300 dark:border-white/20">/</kbd></span>
+            </div>
+            <form id="barra" class="flex items-center gap-2 p-2" autocomplete="off">
+              <label for="q" class="sr-only">Escribe aquí</label>
+              <input id="q" class="flex-1 min-w-0 bg-transparent px-3 py-3 text-[17px] text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none" />
+              <button id="q-ir" type="submit" class="btn-sivax shrink-0 px-4 py-2.5 rounded-lg text-sm font-semibold"></button>
+            </form>
+            <div id="resultados" class="hidden border-t border-slate-200 dark:border-white/10 max-h-80 overflow-y-auto" role="listbox" aria-label="Estudiantes encontrados"></div>
+          </div>
+
+          <div id="sugerencias" class="mt-3 flex flex-wrap gap-2"></div>
+        </section>
+
+        <!-- Tu semana -->
+        <section aria-labelledby="t-semana">
+          <h2 id="t-semana" class="text-[11px] font-semibold uppercase tracking-wider sx-subtle mb-3">Tu semana</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <a href="lista.html" class="group bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:border-sivax dark:hover:border-sivax-tint transition-colors">
+              <div class="flex items-baseline justify-between">
+                <span class="text-sm font-semibold text-slate-900 dark:text-white">Llamadas de la lista</span>
+                <span class="font-mono-num text-xs sx-muted">3 de 8</span>
+              </div>
+              <div class="mt-3 h-1.5 rounded-full bg-slate-100 dark:bg-white/10 overflow-hidden"><div class="h-full w-[37.5%] bg-sivax dark:bg-sivax-tint rounded-full"></div></div>
+              <p class="mt-2.5 text-[13px] sx-muted"><strong class="text-red-700 dark:text-red-300">5 pendientes</strong>, 3 de ellas prioridad 1 para hoy.</p>
+              <span class="mt-2 inline-block text-[13px] font-semibold sx-brand-text">Empezar a llamar →</span>
+            </a>
+            <a href="ficha.html?id=est-104" class="group bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:border-sivax dark:hover:border-sivax-tint transition-colors">
+              <div class="flex items-baseline justify-between">
+                <span class="text-sm font-semibold text-slate-900 dark:text-white">Citas de esta semana</span>
+                <span class="font-mono-num text-xs sx-muted">2</span>
+              </div>
+              <ul class="mt-2.5 space-y-1.5 text-[13px]">
+                <li class="flex justify-between gap-2"><span class="text-slate-800 dark:text-slate-200">Sebastián Araya · tutoría Álgebra</span><span class="font-mono-num sx-muted shrink-0">jue 26 · 19:00</span></li>
+                <li class="flex justify-between gap-2"><span class="text-slate-800 dark:text-slate-200">Camila Rojas · reforzamiento INF-201</span><span class="font-mono-num sx-muted shrink-0">jue 26 · 10:30</span></li>
+              </ul>
+              <span class="mt-2 inline-block text-[13px] font-semibold sx-brand-text">Ver agenda →</span>
+            </a>
+            <a href="lista.html" class="group bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg p-4 hover:border-sivax dark:hover:border-sivax-tint transition-colors">
+              <div class="flex items-baseline justify-between">
+                <span class="text-sm font-semibold text-slate-900 dark:text-white">Sin gestión hace 14 días</span>
+                <span class="font-mono-num text-xs sx-muted">18</span>
+              </div>
+              <p class="mt-2.5 text-[13px] sx-muted">Estudiantes con prioridad 1 o 2 que nadie ha contactado en dos semanas. Bajó en 6 respecto de la semana pasada.</p>
+              <span class="mt-2 inline-block text-[13px] font-semibold sx-brand-text">Revisar casos →</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Tareas -->
+        <section aria-labelledby="t-tareas">
+          <h2 id="t-tareas" class="text-[11px] font-semibold uppercase tracking-wider sx-subtle mb-3">Lo que más se hace</h2>
+          <div id="tareas" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+        </section>
+
+        <!-- Como funciona -->
+        <section aria-labelledby="t-como" class="border-t border-slate-200 dark:border-white/10 pt-8">
+          <h2 id="t-como" class="font-display text-lg font-semibold text-slate-900 dark:text-white">Cómo funciona Sivax</h2>
+          <ol class="mt-4 grid grid-cols-1 md:grid-cols-3 gap-6 text-[14px]">
+            <li>
+              <span class="font-mono-num text-xs sx-brand-text font-semibold">Cada domingo</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-white">Revisa asistencia y notas</p>
+              <p class="mt-1 sx-muted">Toma la asistencia real de cada clase, las notas ya ingresadas y la situación de cada estudiante.</p>
+            </li>
+            <li>
+              <span class="font-mono-num text-xs sx-brand-text font-semibold">El lunes</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-white">Arma la lista por prioridad</p>
+              <p class="mt-1 sx-muted">Cada estudiante trae el motivo en palabras simples y qué hacer con él. Prioridad 1 se llama el mismo día.</p>
+            </li>
+            <li>
+              <span class="font-mono-num text-xs sx-brand-text font-semibold">Durante la semana</span>
+              <p class="mt-1 font-semibold text-slate-900 dark:text-white">Llamas y registras</p>
+              <p class="mt-1 sx-muted">Cada atención queda en la bitácora del estudiante y el avance se ve en el panel.</p>
+            </li>
+          </ol>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="shared/data.js"></script>
+  <script src="shared/estudiantes.js"></script>
+  <script src="shared/ui.js"></script>
+  <script>
+    (function () {
+      var ICO = {
+        tel: '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/>',
+        lupa: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
+        nota: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/>',
+        graf: '<path d="M3 3v18h18M7 16v-5m5 5V8m5 8v-3"/>',
+        libro: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M8 7h8M8 11h6"/>',
+        hoja: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8M12 13v4"/>'
+      };
+      var TAREAS = [
+        ['tel', 'Llamar a mi lista de la semana', 'Quién llamar primero, por qué y qué decirle.', 'lista.html', ''],
+        ['lupa', 'Ver la situación de un estudiante', 'Riesgo, notas, asistencia y todo lo que se ha hecho con él.', 'buscar.html', ''],
+        ['nota', 'Registrar una atención', 'Una llamada, una cita o una derivación, en menos de un minuto.', 'lista.html', ''],
+        ['hoja', 'Pedir un informe en Excel', 'Pregunta en palabras simples y recibe la planilla con sus columnas explicadas.', 'asistente.html', ''],
+        ['graf', 'Ver el campus en 3D', 'Cada sede con su auditorio de 100 alumnos: quiénes siguen, quiénes están en riesgo y quiénes se fueron.', 'campus3d.html', ''],
+        ['graf', 'Ver cómo vamos', 'Las 8 preguntas clave: este año contra el anterior, sedes, carreras y si los contactos funcionan.', 'diagnostico.html', '']
+      ];
+      document.getElementById('tareas').innerHTML = TAREAS.map(function (t) {
+        var off = t[4] ? ' aria-disabled="true"' : '';
+        return '<a href="' + t[3] + '"' + off + ' class="flex gap-3 items-start bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg p-4 ' + (t[4] ? 'opacity-70' : 'hover:border-sivax dark:hover:border-sivax-tint') + ' transition-colors">' +
+          '<span class="w-9 h-9 shrink-0 rounded-md bg-sivax/[0.07] dark:bg-white/10 text-sivax dark:text-indigo-200 flex items-center justify-center"><svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">' + ICO[t[0]] + '</svg></span>' +
+          '<span class="min-w-0"><span class="block text-[14px] font-semibold text-slate-900 dark:text-white">' + t[1] + '</span>' +
+          '<span class="block text-[13px] sx-muted mt-0.5">' + t[2] + '</span>' +
+          (t[4] ? '<span class="inline-block mt-1.5 text-[10.5px] font-semibold px-1.5 py-0.5 rounded bg-slate-100 dark:bg-white/10 sx-muted">' + t[4] + '</span>' : '') +
+          '</span></a>';
+      }).join('');
+
+      var SUGERENCIAS = [
+        '¿Quiénes de primer año en riesgo alto no han sido contactados en 14 días?',
+        'Dame la lista de esta semana de la Sede Norte en Excel',
+        '¿Qué carreras están bajo la meta de retención?',
+        '¿Cuántos retractos hubo en marzo y abril?'
+      ];
+      var todos = window.SIVAX_MOCK.listaSemanal.map(function (r) { return { id: r.id, nombre: r.nombre, rut: r.rut, carrera: r.carrera, sede: r.sede, riesgo: r.riesgo, riesgoKey: r.riesgoKey }; })
+        .concat(window.SIVAX_DIRECTORIO.map(function (r) { return { id: r.id, nombre: r.nombre, rut: r.rut, carrera: r.carrera, sede: r.sede, riesgo: r.riesgo, riesgoKey: r.riesgoKey }; }));
+
+      var modo = 'buscar';
+      var q = document.getElementById('q');
+      var res = document.getElementById('resultados');
+      var ON = 'modo px-3 py-1.5 rounded-md text-[13px] font-semibold bg-sivax/[0.08] dark:bg-white/10 text-sivax dark:text-white';
+      var OFF = 'modo px-3 py-1.5 rounded-md text-[13px] font-medium sx-muted hover:text-slate-900 dark:hover:text-white';
+
+      function sinTildes(s) { return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+
+      function pintarModo() {
+        document.querySelectorAll('[data-modo]').forEach(function (b) {
+          var on = b.getAttribute('data-modo') === modo;
+          b.className = on ? ON : OFF;
+          b.setAttribute('aria-selected', String(on));
+        });
+        q.placeholder = modo === 'buscar' ? 'Un estudiante (Camila Rojas, 21.408.312) o una pantalla (ficha, panel)' : 'Escribe tu pregunta, por ejemplo: ¿quiénes faltaron a más del 30 % este mes?';
+        document.getElementById('q-ir').textContent = modo === 'buscar' ? 'Buscar' : 'Preguntar';
+        document.getElementById('sugerencias').innerHTML = modo === 'buscar'
+          ? '<span class="text-[12px] sx-subtle">Busca por nombre, apellido o RUT. También puedes escribir una pantalla, como «ficha del estudiante», «cómo vamos» o «lista semanal».</span>'
+          : SUGERENCIAS.map(function (s) {
+              return '<a href="asistente.html?q=' + encodeURIComponent(s) + '" class="text-[12.5px] px-3 py-1.5 rounded-full border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darksurface text-slate-700 dark:text-slate-200 hover:border-sivax dark:hover:border-sivax-tint">' + s + '</a>';
+            }).join('');
+        buscar();
+      }
+
+      var VISTAS = [
+        { t: 'Ficha 360° del estudiante', d: 'Riesgo, avance, bitácora y acciones de un estudiante', u: 'ficha.html', k: 'ficha estudiante alumno 360 perfil caso bitacora historial' },
+        { t: 'Cómo vamos', d: 'Las 8 preguntas clave respondidas con gráficos', u: 'diagnostico.html', k: 'como vamos diagnostico resumen año anterior comparacion problema sede carrera efectivos contactos reales seguimiento coherente ayudar' },
+        { t: 'Lista semanal: a quién llamar', d: 'Casos priorizados 1 a 4 con qué hacer', u: 'lista.html', k: 'lista semanal llamar llamadas contactar prioridad casos atencion registrar' },
+        { t: 'Panel ejecutivo', d: 'Retención contra la meta, tendencias y filtros', u: 'panel.html', k: 'panel ejecutivo dashboard kpi indicadores retencion meta permanencia graficos' },
+        { t: 'Campus 3D', d: 'Cada sede con su auditorio de 100 alumnos', u: 'campus3d.html', k: 'campus 3d mapa sedes edificio auditorio' },
+        { t: 'Buscar estudiante', d: 'Por nombre o RUT, con filtros', u: 'buscar.html', k: 'buscar buscador estudiante alumno rut nombre directorio' },
+        { t: 'Preguntar a Sivax', d: 'Asistente que responde y entrega un Excel', u: 'asistente.html', k: 'preguntar asistente ia sivax excel pregunta chat' }
+      ];
+      function vistas(t) {
+        if (t.length < 3) return [];
+        var pal = t.split(/\s+/).filter(function (w) { return w.length > 2 && ['del','las','los','una','para','ver','abrir','quiero'].indexOf(w) < 0; });
+        if (!pal.length) return [];
+        return VISTAS.map(function (v) {
+          var base = sinTildes(v.t + ' ' + v.k), n = 0;
+          pal.forEach(function (w) { if (base.indexOf(w) > -1) n++; });
+          return { v: v, n: n };
+        }).filter(function (x) { return x.n > 0; }).sort(function (a, b) { return b.n - a.n; }).slice(0, 3).map(function (x) { return x.v; });
+      }
+      function htmlVistas(vs) {
+        if (!vs.length) return '';
+        return '<p class="px-4 pt-2.5 pb-1 text-[11px] font-semibold uppercase tracking-wide sx-subtle">Ir a una pantalla</p>' + vs.map(function (v) {
+          return '<a role="option" href="' + v.u + '" class="flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-white/5">' +
+            '<span class="min-w-0"><span class="block text-[14px] font-semibold text-slate-900 dark:text-white truncate">' + v.t + '</span>' +
+            '<span class="block text-[12px] sx-muted truncate">' + v.d + '</span></span><span class="shrink-0 text-[12px] font-semibold sx-brand-text">Abrir →</span></a>';
+        }).join('');
+      }
+
+      function buscar() {
+        var bruto = sinTildes(q.value.trim());
+        var t = bruto.replace(/[.\s-]/g, '');
+        var vs = vistas(bruto);
+        if (modo !== 'buscar' || t.length < 2) {
+          if (vs.length) { res.classList.remove('hidden'); res.innerHTML = htmlVistas(vs); } else res.classList.add('hidden');
+          return;
+        }
+        var hits = todos.filter(function (r) {
+          return sinTildes(r.nombre).replace(/\s/g, '').indexOf(t) > -1 || r.rut.replace(/[.\-]/g, '').toLowerCase().indexOf(t) > -1;
+        }).slice(0, 6);
+        res.classList.remove('hidden');
+        if (!hits.length && vs.length) { res.innerHTML = htmlVistas(vs); return; }
+        res.innerHTML = htmlVistas(vs) + (hits.length ? (vs.length ? '<p class="px-4 pt-2.5 pb-1 text-[11px] font-semibold uppercase tracking-wide sx-subtle border-t border-slate-200 dark:border-white/10">Estudiantes</p>' : '') + hits.map(function (r) {
+          var rb = window.SIVAX_UI.riskBadgeClass(r.riesgoKey);
+          var destino = window.SIVAX_MOCK.fichas[r.id] ? 'ficha.html?id=' + r.id : 'buscar.html?q=' + encodeURIComponent(r.nombre);
+          return '<a role="option" href="' + destino + '" class="flex items-center justify-between gap-3 px-4 py-2.5 hover:bg-slate-50 dark:hover:bg-white/5">' +
+            '<span class="min-w-0"><span class="block text-[14px] font-semibold text-slate-900 dark:text-white truncate">' + r.nombre + '</span>' +
+            '<span class="block text-[12px] sx-muted truncate"><span class="font-mono-num">' + r.rut + '</span> · ' + r.carrera + ' · ' + r.sede + '</span></span>' +
+            '<span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded ' + rb + '">' + r.riesgo + '</span></a>';
+        }).join('') + '<a href="buscar.html?q=' + encodeURIComponent(q.value) + '" class="block px-4 py-2.5 text-[13px] font-semibold sx-brand-text border-t border-slate-200 dark:border-white/10">Ver todos los resultados →</a>'
+          : '<p class="px-4 py-4 text-[13px] sx-muted">No hay estudiantes ni pantallas con ese nombre. Prueba con el apellido, el RUT o el nombre de una pantalla, como «ficha» o «panel».</p>');
+      }
+
+      document.querySelectorAll('[data-modo]').forEach(function (b) {
+        b.addEventListener('click', function () { modo = b.getAttribute('data-modo'); pintarModo(); q.focus(); });
+      });
+      q.addEventListener('input', buscar);
+      document.getElementById('barra').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var v = q.value.trim();
+        var vs = vistas(sinTildes(v));
+        var esAlumno = todos.some(function (r) { var t = sinTildes(v).replace(/[.\s-]/g, ''); return t.length > 1 && (sinTildes(r.nombre).replace(/\s/g, '').indexOf(t) > -1 || r.rut.replace(/[.\-]/g, '').toLowerCase().indexOf(t) > -1); });
+        if (vs.length && !esAlumno && (modo === 'buscar' || v.split(/\s+/).length <= 4)) { location.href = vs[0].u; return; }
+        if (modo === 'preguntar') { location.href = 'asistente.html' + (v ? '?q=' + encodeURIComponent(v) : ''); }
+        else { location.href = 'buscar.html' + (v ? '?q=' + encodeURIComponent(v) : ''); }
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === '/' && document.activeElement !== q && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); }
+      });
+
+      window.SIVAX_UI.initTheme();
+      pintarModo();
+    })();
+  </script>
+
+<nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 flex bg-white/95 dark:bg-sivax-darksurface/95 backdrop-blur border-t border-slate-200 dark:border-white/10" aria-label="Navegación móvil"><a href="inicio.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] text-sivax dark:text-white font-semibold"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a><a href="buscar.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a><a href="asistente.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar</a><a href="lista.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista</a></nav>
+</body>
+</html>

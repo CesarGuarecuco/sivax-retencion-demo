@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Maqueta Sivax Retención</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+  <style>
+  /* Portada sobria: lista de pantallas con su captura, ancho de lectura */
+  :root {
+    color-scheme: light; box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg: #f6f7fa; --surface: #ffffff; --fg: #111322; --muted: #52586c;
+    --line: rgba(15,23,42,.10); --brand: #2d1b8f; --brand-soft: rgba(45,27,143,.07);
+    --display: "Schibsted Grotesk", system-ui, sans-serif;
+    --body: "Source Sans 3", system-ui, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  img { max-width: 100%; }
+  [hidden]:not([hidden="until-found" i]) { display: none !important; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #160a3a; --surface: #1e104b; --fg: #f3f2fb; --muted: #b3add4;
+    --line: rgba(255,255,255,.12); --brand: #a99cfa; --brand-soft: rgba(139,124,246,.14); color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --bg: #160a3a; --surface: #1e104b; --fg: #f3f2fb; --muted: #b3add4;
+    --line: rgba(255,255,255,.12); --brand: #a99cfa; --brand-soft: rgba(139,124,246,.14); color-scheme: dark }
+  body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 var(--body); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-block: 40px 64px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  .top { border-top: 3px solid var(--brand); }
+  .marca { display: flex; align-items: center; gap: 10px; font: 600 14px var(--display); }
+  .marca b { width: 28px; height: 28px; border-radius: 6px; background: #2d1b8f; color: #fff; display: grid; place-items: center; font-size: 13px; }
+  h1 { font: 700 clamp(28px, 4vw, 38px)/1.15 var(--display); margin: 28px 0 8px; text-wrap: balance; letter-spacing: -.01em; }
+  .bajada { color: var(--muted); max-width: 62ch; margin: 0; }
+  .meta { font: 500 12px var(--mono); color: var(--muted); margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  .pantallas { display: grid; gap: 20px; margin-top: 36px; }
+  .p { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 24px; align-items: center;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; color: inherit; text-decoration: none; }
+  .p:hover, .p:focus-visible { border-color: var(--brand); outline: none; }
+  .p img { width: 100%; border: 1px solid var(--line); border-radius: 6px; display: block; }
+  .p h2 { font: 600 20px var(--display); margin: 0 0 6px; }
+  .p p { margin: 0; color: var(--muted); font-size: 15px; }
+  .p .ir { margin-top: 14px; font-weight: 600; color: var(--brand); }
+  .num { font: 500 12px var(--mono); color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+  .cambios { margin-top: 40px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px 24px; }
+  .cambios h2 { font: 600 17px var(--display); margin: 0 0 10px; }
+  .cambios ul { margin: 0; padding-left: 20px; color: var(--muted); display: grid; gap: 6px; }
+  .extra { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+  .extra figure { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
+  .extra img { width: 100%; border-radius: 6px; border: 1px solid var(--line); display: block; }
+  .extra .movil img { max-width: 260px; margin: 0 auto; }
+  figcaption { font-size: 14px; color: var(--muted); margin-top: 10px; }
+  @media (max-width: 720px) { .p, .extra { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="top"></div>
+<div class="wrap">
+  <div class="marca"><b>S</b>Sivax Retención</div>
+  <h1>Maqueta de Sivax Retención</h1>
+  <p class="bajada">Todo parte de una pregunta: ¿qué quieres hacer hoy? Desde el inicio se busca a un estudiante, se le pregunta al asistente y se llega a cada tarea en un clic. Cada pantalla explica sus columnas y se puede usar de verdad. Todos los datos son inventados.</p>
+  <div class="meta"><span>Versión 5 · 24-11-2026</span><span>Aprobación antes del 28-11</span><span>Escritorio y celular</span></div>
+
+  <div class="pantallas">
+    <a class="p" href="diagnostico.html">
+      <div><div class="num">Nuevo</div><h2>Cómo vamos: 8 preguntas, 8 gráficos</h2><p>Este año contra el anterior, el principal problema, qué sede va mal y por qué, en qué carrera enfocarse, si los contactos funcionan y son reales, si el seguimiento es coherente y qué hacer en cada caso, con la biblioteca de buenas prácticas que lee el asistente.</p><div class="ir">Abrir cómo vamos →</div></div>
+      <img src="img/diagnostico.png" alt="Captura de cómo vamos">
+    </a>
+    <a class="p" href="campus3d.html">
+      <div><div class="num">Campus</div><h2>Campus 3D</h2><p>Cada sede es un edificio universitario con un auditorio de 100 alumnos; cada uno es el 1 % de la matrícula de primer año. Dale play: todos parten en verde en marzo y, mes a mes, los que se retiran quedan en gris. Puedes filtrar por sede y por carrera.</p><div class="ir">Abrir campus 3D →</div></div>
+      <img src="img/campus3d.png" alt="Captura del campus 3D">
+    </a>
+    <a class="p" href="inicio.html">
+      <div><div class="num">Pantalla 1</div><h2>Inicio: ¿qué quieres hacer hoy?</h2><p>Una barra grande para buscar a un estudiante o preguntarle a Sivax, tu semana en tres tarjetas y las tareas más comunes. Al final, cómo funciona Sivax en tres pasos.</p><div class="ir">Abrir inicio →</div></div>
+      <img src="img/inicio.png" alt="Captura del inicio">
+    </a>
+    <a class="p" href="asistente.html">
+      <div><div class="num">Pantalla 2</div><h2>Preguntar a Sivax</h2><p>Preguntas en palabras simples y recibes la respuesta junto con un Excel de 3 hojas: los datos, qué significa cada columna y cómo se calculó. Prueba las preguntas de ejemplo.</p><div class="ir">Abrir asistente →</div></div>
+      <img src="img/asistente.png" alt="Captura del asistente">
+    </a>
+    <a class="p" href="buscar.html">
+      <div><div class="num">Pantalla 3</div><h2>Buscar estudiante</h2><p>Por nombre o RUT, con filtros de sede, riesgo y situación. Arriba se explica cada columna; el nombre lleva a la ficha completa.</p><div class="ir">Abrir buscador →</div></div>
+      <img src="img/buscar.png" alt="Captura del buscador">
+    </a>
+    <a class="p" href="lista.html">
+      <div><div class="num">Pantalla 4</div><h2>A quién llamar esta semana</h2><p>Lista ordenada por prioridad 1 a 4, con qué hacer, último contacto y responsable. «Registrar atención» abre un panel lateral.</p><div class="ir">Abrir lista →</div></div>
+      <img src="img/lista.png" alt="Captura de la lista semanal">
+    </a>
+    <a class="p" href="ficha.html">
+      <div><div class="num">Pantalla 5</div><h2>Ficha 360° del estudiante</h2><p>Riesgo y acción, avance curricular y bitácora, con las propiedades del caso y las acciones rápidas siempre a la vista.</p><div class="ir">Abrir ficha →</div></div>
+      <img src="img/ficha.png" alt="Captura de la ficha 360°">
+    </a>
+    <a class="p" href="panel.html">
+      <div><div class="num">Pantalla 6</div><h2>Panel ejecutivo</h2><p>Retención contra la meta, permanencia, avance de la lista, casos sin gestión, riesgo alto y asistencia, con su tendencia. Filtros por sede y jornada.</p><div class="ir">Abrir panel →</div></div>
+      <img src="img/panel.png" alt="Captura del panel ejecutivo">
+    </a>
+  </div>
+
+  <div class="extra">
+    <figure><img src="img/campus3d-dark.png" alt="Campus 3D en modo oscuro"><figcaption>Modo oscuro, opcional para quien lo prefiera.</figcaption></figure>
+    <figure class="movil"><img src="img/inicio-m.png" alt="Inicio en celular"><figcaption>En celular todo pasa a una columna y el menú va abajo.</figcaption></figure>
+  </div>
+
+  <section class="cambios">
+    <h2>Qué cambió en esta versión</h2>
+    <ul>
+      <li>Nueva pantalla «Cómo vamos» con las 8 preguntas clave, cada una con su gráfico, el porqué y qué hacer.</li>
+      <li>La barra del inicio también abre pantallas: escribe «ficha del estudiante», «panel» o «cómo vamos» y te lleva.</li>
+      <li>Nuevo campus 3D: cada sede con su auditorio de 100 alumnos que se van poniendo grises mes a mes, con filtro por carrera.</li>
+      <li>Nuevo inicio «¿Qué quieres hacer hoy?», con buscador y asistente a la vista.</li>
+      <li>Nuevas pantallas: buscar estudiante y preguntar a Sivax con Excel explicado.</li>
+      <li>La lista y el panel traen una ayuda «Cómo se usa» que se abre con un clic.</li>
+      <li>Menú lateral blanco con una línea violeta arriba, en vez del menú violeta oscuro.</li>
+      <li>«Sin riesgo» va en gris en el gráfico, para que la vista vaya a los casos críticos.</li>
+      <li>«Registrar atención» es un botón discreto en cada fila y se destaca al pasar el mouse.</li>
+      <li>Sale «Alertas A/B/C» del menú; entran los módulos de Sivax: agenda, atenciones, tutores, campañas, encuestas y re-matrícula.</li>
+      <li>Fechas en formato 26-11-2026 y teléfono del estudiante enmascarado.</li>
+      <li>Versión para celular con tarjetas y navegación inferior.</li>
+    </ul>
+  </section>
+</div>
+
+</body></html>

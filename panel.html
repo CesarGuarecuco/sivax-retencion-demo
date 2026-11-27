@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sivax Retención · maqueta</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="shared/tailwind-config.js"></script>
+  <link rel="stylesheet" href="shared/tokens.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.1/echarts.min.js"></script>
+</head>
+<body class="pb-16 lg:pb-0 bg-sivax-lightbg text-slate-900 dark:bg-sivax-darkbg dark:text-slate-100 min-h-screen">
+  <div class="flex min-h-screen">
+    <aside class="hidden lg:flex lg:w-56 lg:flex-col bg-white dark:bg-sivax-darksurface text-slate-700 border-r border-slate-200 dark:border-white/10 border-t-[3px] border-t-sivax shrink-0 sticky top-0 h-screen">
+      <div class="h-12 px-4 flex items-center border-b border-slate-200 dark:border-white/10">
+        <a href="inicio.html" class="flex items-center gap-2 min-w-0">
+          <span class="w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs">S</span>
+          <span class="leading-tight min-w-0"><span class="block font-display font-semibold text-[13px] text-slate-900 dark:text-white truncate">Sivax Retención</span><span class="block text-[10.5px] text-slate-500 dark:text-slate-400 truncate">Sede Norte · Sede Sur</span></span>
+        </a>
+      </div>
+      <nav class="flex-1 px-2.5 py-3 space-y-5 text-[12.5px]" aria-label="Navegación principal">
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Mi trabajo</p>
+          <ul class="space-y-0.5"><li><a href="inicio.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</span></a></li><li><a href="diagnostico.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg>Cómo vamos</span></a></li><li><a href="buscar.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar estudiante</span></a></li><li><a href="asistente.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar a Sivax</span></a></li><li><a href="lista.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista semanal</span><span id="sidebar-pending" class="font-mono-num text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 dark:bg-red-500/20 dark:text-red-200 dark:border-red-400/30">5</span></a></li><li><a href="panel.html" aria-current="page" class="flex items-center justify-between px-2.5 py-1.5 rounded relative bg-sivax/[0.07] dark:bg-white/10 text-sivax dark:text-white font-semibold before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-[3px] before:rounded-r before:bg-sivax dark:before:bg-sivax-tint"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16v-5m5 5V8m5 8v-3"/></svg>Panel ejecutivo</span></a></li><li><a href="campus3d.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>Campus 3D</span></a></li><li><a href="ficha.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Ficha 360°</span></a></li></ul>
+        </div>
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Más módulos</p>
+          <ul class="space-y-0.5 text-slate-400 dark:text-slate-500" title="Se diseñan en la siguiente entrega"><li class="px-2.5 py-1">Avance de llamadas</li><li class="px-2.5 py-1">Tutorías por sección</li><li class="px-2.5 py-1">Agenda y citas</li><li class="px-2.5 py-1">Tutores y apoyo</li><li class="px-2.5 py-1">Campañas y talleres</li><li class="px-2.5 py-1">Encuestas</li><li class="px-2.5 py-1">Re-matrícula</li></ul>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-slate-200 dark:border-white/10 text-[11px]">
+        <div class="font-semibold text-slate-900 dark:text-white truncate">Andrea Molina</div>
+        <div class="text-slate-500 dark:text-slate-400 truncate">Coordinación · datos de demostración</div>
+      </div>
+    </aside>
+    <div class="flex-1 flex flex-col min-w-0">
+      <header class="h-11 px-4 bg-white dark:bg-sivax-darksurface border-b border-slate-200 dark:border-white/10 flex items-center justify-between gap-2 sticky top-0 z-20">
+        <div class="flex items-center gap-2 text-xs min-w-0">
+          <a href="inicio.html" class="lg:hidden w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs shrink-0" aria-label="Inicio">S</a>
+          <span class="font-display font-semibold text-slate-900 dark:text-white truncate">Panel ejecutivo</span>
+          <span class="hidden md:inline font-mono-num text-[11px] sx-subtle">Corte 23-11-2026 · 2026-2 · Sem. 47</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="hidden sm:inline-flex rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkbg p-0.5 text-[11px]" role="group" aria-label="Sede">
+            <button type="button" data-seg="sede" data-val="todas" class="seg px-2.5 py-0.5 rounded">Todas</button>
+            <button type="button" data-seg="sede" data-val="norte" class="seg px-2.5 py-0.5 rounded">Norte</button>
+            <button type="button" data-seg="sede" data-val="sur" class="seg px-2.5 py-0.5 rounded">Sur</button>
+          </div>
+          <div class="hidden sm:inline-flex rounded-md border border-slate-200 dark:border-white/15 bg-slate-50 dark:bg-sivax-darkbg p-0.5 text-[11px]" role="group" aria-label="Jornada">
+            <button type="button" data-seg="jornada" data-val="todas" class="seg px-2.5 py-0.5 rounded">Ambas</button>
+            <button type="button" data-seg="jornada" data-val="diurna" class="seg px-2.5 py-0.5 rounded">Diurna</button>
+            <button type="button" data-seg="jornada" data-val="vespertina" class="seg px-2.5 py-0.5 rounded">Vespertina</button>
+          </div>
+          <select id="sede-filter" aria-label="Filtrar por sede" class="sm:hidden text-xs rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated px-2 py-1"><option value="todas">Todas las sedes</option><option value="norte">Sede Norte</option><option value="sur">Sede Sur</option></select>
+          <select id="jornada-filter" aria-label="Filtrar por jornada" class="hidden"><option value="todas">Ambas</option><option value="diurna">Diurna</option><option value="vespertina">Vespertina</option></select>
+          <button type="button" data-toggle-theme aria-label="Cambiar tema" class="inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-slate-700 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-white/10">
+            <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+            <span data-theme-label class="hidden sm:inline">Modo oscuro</span>
+          </button>
+        </div>
+      </header>
+      <main class="flex-1 p-4 lg:p-6 max-w-[1380px] w-full mx-auto space-y-5">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div>
+            <h1 class="font-display text-2xl font-semibold tracking-tight text-slate-900 dark:text-white">Retención y riesgo semanal</h1>
+            <p class="text-xs sx-muted mt-1">Estudiantes vigentes a la fecha de corte · datos de demostración</p>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <a href="lista.html" class="btn-sivax inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold shadow-sm">
+              Abrir lista semanal
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        
+        <details class="bg-sivax/[0.035] dark:bg-white/[0.04] border border-sivax/15 dark:border-white/10 rounded-lg text-[13px]">
+          <summary class="cursor-pointer px-4 py-2 font-semibold sx-brand-text">Cómo se lee este panel</summary>
+          <ul class="px-4 pb-3 pl-9 list-disc space-y-1 sx-muted">
+            <li>Cada cifra muestra arriba a la derecha cuánto cambió respecto de la semana pasada: verde si mejoró, rojo si empeoró.</li>
+            <li>La línea pequeña es la tendencia de las últimas 10 semanas.</li>
+            <li>Retención de primer año = estudiantes que siguen ÷ matrícula de primer año. Un retracto cuenta como abandono, sin importar la fecha.</li>
+            <li>Los filtros de sede y jornada de arriba cambian todo el panel.</li>
+          </ul>
+        </details>
+        <!-- 6 KPI Cards -->
+        <section aria-label="Indicadores clave" id="kpi-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4"></section>
+
+        <!-- Charts Row 1 -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div class="bg-white dark:bg-sivax-darksurface rounded-xl border border-slate-200/90 dark:border-white/10 p-5 shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
+            <div class="flex items-center justify-between mb-3">
+              <h2 class="font-display text-base font-semibold text-slate-900 dark:text-white">Estudiantes por nivel de riesgo</h2>
+              <span class="font-mono-num text-[11px] sx-muted">Vigentes</span>
+            </div>
+            <div id="chart-risk" class="h-64 w-full"></div>
+          </div>
+
+          <div class="bg-white dark:bg-sivax-darksurface rounded-xl border border-slate-200/90 dark:border-white/10 p-5 shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
+            <div class="flex items-center justify-between mb-3">
+              <h2 class="font-display text-base font-semibold text-slate-900 dark:text-white">Riesgo alto por semana</h2>
+              <span class="font-mono-num text-[11px] px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 dark:text-emerald-300">Crítico + Alto · Sem. 38 a 47</span>
+            </div>
+            <div id="chart-weekly" class="h-64 w-full"></div>
+          </div>
+        </section>
+
+        <!-- Charts Row 2 -->
+        <section class="bg-white dark:bg-sivax-darksurface rounded-xl border border-slate-200/90 dark:border-white/10 p-5 shadow-[0_1px_2px_rgba(15,23,42,0.03)]">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <h2 class="font-display text-base font-semibold text-slate-900 dark:text-white">Aprobación por carrera</h2>
+            <div class="flex items-center gap-4 text-[11px] sx-muted">
+              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-sivax dark:bg-sivax-tint"></span>Sobre 75 %</span>
+              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-orange-600 dark:bg-orange-400"></span>70 a 75 %</span>
+              <span class="inline-flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-sm bg-red-600 dark:bg-red-400"></span>Bajo 70 %</span>
+            </div>
+          </div>
+          <div id="chart-approval" class="h-64 w-full"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+
+  <script src="shared/data.js"></script>
+  <script src="shared/charts.js"></script>
+  <script src="shared/ui.js"></script>
+  <script>
+    (function () {
+      const grid = document.getElementById('kpi-grid');
+      const selSede = document.getElementById('sede-filter');
+      const selJornada = document.getElementById('jornada-filter');
+
+      function render() {
+        const sede = selSede.value;
+        const jornada = selJornada.value;
+        const pack = window.SIVAX_MOCK.getPanelData(sede, jornada);
+        grid.innerHTML = pack.kpis.map(function (k) {
+          const badgeCls = k.deltaGood
+            ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300'
+            : 'bg-red-500/10 text-red-700 dark:text-red-300';
+          return (
+            '<article class="bg-white dark:bg-sivax-darksurface rounded-xl border border-slate-200/90 dark:border-white/10 p-5 shadow-[0_1px_2px_rgba(15,23,42,0.03)] flex flex-col justify-between">' +
+              '<div class="flex items-center justify-between gap-2">' +
+                '<span class="text-xs font-medium sx-muted">' + k.label + '</span>' +
+                '<span class="font-mono-num text-[11px] font-medium px-2 py-0.5 rounded-full ' + badgeCls + '">' + k.delta + '</span>' +
+              '</div>' +
+              '<div class="mt-3 flex items-end justify-between gap-4">' +
+                '<div class="min-w-0">' +
+                  '<div class="font-mono-num text-[28px] leading-none font-semibold tracking-tight text-slate-900 dark:text-white">' + k.value + '</div>' +
+                  '<div class="text-[11.5px] sx-muted mt-2 leading-snug">' + k.sub + '</div>' +
+                '</div>' +
+                '<div class="w-24 h-11 shrink-0" data-spark="' + k.id + '"></div>' +
+              '</div>' +
+            '</article>'
+          );
+        }).join('');
+        window.SIVAX_CHARTS.renderPanelCharts(sede, jornada, document.documentElement.classList.contains('dark'));
+      }
+
+      selSede.addEventListener('change', render);
+      selJornada.addEventListener('change', render);
+      window.addEventListener('sivax:theme', function () {
+        window.SIVAX_CHARTS.renderPanelCharts(selSede.value, selJornada.value, document.documentElement.classList.contains('dark'));
+      });
+
+      window.SIVAX_UI.initTheme();
+      render();
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var ON = 'seg px-2.5 py-0.5 rounded font-semibold bg-white dark:bg-sivax-darkelevated text-slate-900 dark:text-white shadow-sm';
+      var OFF = 'seg px-2.5 py-0.5 rounded font-medium sx-muted hover:text-slate-900 dark:hover:text-white';
+      function paint() {
+        document.querySelectorAll('[data-seg]').forEach(function (b) {
+          var sel = document.getElementById(b.getAttribute('data-seg') + '-filter');
+          b.className = sel.value === b.getAttribute('data-val') ? ON : OFF;
+          b.setAttribute('aria-pressed', String(sel.value === b.getAttribute('data-val')));
+        });
+      }
+      document.querySelectorAll('[data-seg]').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var sel = document.getElementById(b.getAttribute('data-seg') + '-filter');
+          sel.value = b.getAttribute('data-val');
+          sel.dispatchEvent(new Event('change'));
+          paint();
+        });
+      });
+      document.getElementById('sede-filter').addEventListener('change', paint);
+      paint();
+    })();
+  </script>
+<nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 flex bg-white/95 dark:bg-sivax-darksurface/95 backdrop-blur border-t border-slate-200 dark:border-white/10" aria-label="Navegación móvil"><a href="inicio.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a><a href="buscar.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a><a href="asistente.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar</a><a href="lista.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista</a></nav>
+</body>
+</html>

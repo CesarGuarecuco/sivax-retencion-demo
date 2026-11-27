@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo vamos · Sivax</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Schibsted+Grotesk:wght@500;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="shared/tailwind-config.js"></script>
+  <link rel="stylesheet" href="shared/tokens.css" />
+</head>
+<body class="pb-16 lg:pb-0 bg-sivax-lightbg text-slate-900 dark:bg-sivax-darkbg dark:text-slate-100 min-h-screen">
+  <div class="flex min-h-screen">
+    <aside class="hidden lg:flex lg:w-56 lg:flex-col bg-white dark:bg-sivax-darksurface text-slate-700 border-r border-slate-200 dark:border-white/10 border-t-[3px] border-t-sivax shrink-0 sticky top-0 h-screen">
+      <div class="h-12 px-4 flex items-center border-b border-slate-200 dark:border-white/10">
+        <a href="inicio.html" class="flex items-center gap-2 min-w-0">
+          <span class="w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs">S</span>
+          <span class="leading-tight min-w-0"><span class="block font-display font-semibold text-[13px] text-slate-900 dark:text-white truncate">Sivax Retención</span><span class="block text-[10.5px] text-slate-500 dark:text-slate-400 truncate">Sede Norte · Sede Sur</span></span>
+        </a>
+      </div>
+      <nav class="flex-1 px-2.5 py-3 space-y-5 text-[12.5px]" aria-label="Navegación principal">
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Mi trabajo</p>
+          <ul class="space-y-0.5"><li><a href="inicio.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</span></a></li><li><a href="diagnostico.html" aria-current="page" class="flex items-center justify-between px-2.5 py-1.5 rounded relative bg-sivax/[0.07] dark:bg-white/10 text-sivax dark:text-white font-semibold before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-[3px] before:rounded-r before:bg-sivax dark:before:bg-sivax-tint"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 19V9m6 10V5m6 14v-7m4 7H2"/></svg>Cómo vamos</span></a></li><li><a href="buscar.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar estudiante</span></a></li><li><a href="asistente.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar a Sivax</span></a></li><li><a href="lista.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista semanal</span><span id="sidebar-pending" class="font-mono-num text-[10px] px-1.5 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 dark:bg-red-500/20 dark:text-red-200 dark:border-red-400/30">5</span></a></li><li><a href="panel.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16v-5m5 5V8m5 8v-3"/></svg>Panel ejecutivo</span></a></li><li><a href="campus3d.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>Campus 3D</span></a></li><li><a href="ficha.html" class="flex items-center justify-between px-2.5 py-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white transition-colors"><span class="flex items-center gap-2"><svg class="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Ficha 360°</span></a></li></ul>
+        </div>
+        <div>
+          <p class="px-2.5 mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500">Más módulos</p>
+          <ul class="space-y-0.5 text-slate-400 dark:text-slate-500" title="Se diseñan en la siguiente entrega"><li class="px-2.5 py-1">Avance de llamadas</li><li class="px-2.5 py-1">Tutorías por sección</li><li class="px-2.5 py-1">Agenda y citas</li><li class="px-2.5 py-1">Tutores y apoyo</li><li class="px-2.5 py-1">Campañas y talleres</li><li class="px-2.5 py-1">Encuestas</li><li class="px-2.5 py-1">Re-matrícula</li></ul>
+        </div>
+      </nav>
+      <div class="p-3 border-t border-slate-200 dark:border-white/10 text-[11px]">
+        <div class="font-semibold text-slate-900 dark:text-white truncate">Andrea Molina</div>
+        <div class="text-slate-500 dark:text-slate-400 truncate">Coordinación · datos de demostración</div>
+      </div>
+    </aside>
+    <div class="flex-1 flex flex-col min-w-0">
+      <header class="h-11 px-4 bg-white dark:bg-sivax-darksurface border-b border-slate-200 dark:border-white/10 flex items-center justify-between gap-2 sticky top-0 z-20">
+        <div class="flex items-center gap-2 text-xs min-w-0">
+          <a href="inicio.html" class="lg:hidden w-6 h-6 rounded bg-sivax text-white flex items-center justify-center font-display font-bold text-xs shrink-0" aria-label="Inicio">S</a>
+          <span class="font-display font-semibold text-slate-900 dark:text-white truncate">Cómo vamos</span>
+          <span class="hidden md:inline font-mono-num text-[11px] sx-subtle">Primer año 2026 contra 2025 · corte 22-11</span>
+        </div>
+        <button type="button" data-toggle-theme aria-label="Cambiar tema" class="inline-flex items-center gap-1.5 text-[11px] font-medium px-2.5 py-1 rounded-md border border-slate-200 dark:border-white/15 bg-white dark:bg-sivax-darkelevated text-slate-700 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-white/10">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="1.9" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+          <span data-theme-label class="hidden sm:inline">Modo oscuro</span>
+        </button>
+      </header>
+
+      <div class="flex-1 grid grid-cols-1 xl:grid-cols-[260px_minmax(0,1fr)] max-w-[1400px] w-full mx-auto">
+        <!-- Indice de preguntas -->
+        <nav class="hidden xl:block p-6 pr-2" aria-label="Preguntas">
+          <div class="sticky top-16">
+            <p class="text-[11px] font-semibold uppercase tracking-wider sx-subtle mb-2">Las 8 preguntas</p>
+            <ol id="indice" class="space-y-0.5 text-[13px]"></ol>
+          </div>
+        </nav>
+
+        <main class="min-w-0 p-4 lg:p-6 space-y-6">
+          <div>
+            <h1 class="font-display text-2xl lg:text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">Cómo vamos este año</h1>
+            <p class="text-[14px] sx-muted mt-1 max-w-[70ch]">Ocho preguntas con su respuesta en una frase, el gráfico que la respalda y qué hacer. Las respuestas se recalculan cada lunes con los datos de la semana.</p>
+          </div>
+
+          <!-- Resumen de respuestas -->
+          <section aria-label="Respuestas en corto" class="grid grid-cols-1 md:grid-cols-2 gap-2" id="cortas"></section>
+
+          <div id="secciones" class="space-y-6"></div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.1/echarts.min.js"></script>
+  <script src="shared/ui.js"></script>
+  <script>
+    (function () {
+      var NOMBRES = ['Felipe Lagos', 'Paula Ríos', 'Rodrigo Castro', 'Daniela Fuentes', 'Ignacio Vera'];
+      var P = [
+        {
+          id: 'anio', q: '¿Cómo vamos este año comparado con el anterior?',
+          corta: 'Mejor: 74,2 % de retención contra 72,4 % a la misma fecha de 2025.',
+          estado: 'bien',
+          porque: ['La diferencia se ganó entre mayo y julio, cuando empezó la lista semanal de llamadas.', 'Marzo y abril siguen igual de malos que el año pasado: ahí se pierde más de la mitad de los que se van.', 'Faltan 6 puntos para la meta de 80 % de la institución a 2027; la meta de este año (68 %) ya se cumple.'],
+          accion: ['Ver el panel ejecutivo', 'panel.html'],
+          grafico: 'g-anio'
+        },
+        {
+          id: 'problema', q: '¿Cuál es el principal problema de este año?',
+          corta: 'Los retiros de marzo y abril: 55 de cada 100 que se van, se van antes de la primera nota.',
+          estado: 'mal',
+          porque: ['En esas semanas todavía no hay notas, así que el modelo solo ve asistencia y la alerta llega tarde.', 'La causa más declarada en el retracto es la inasistencia (38 %), seguida por notas bajas (24 %) y razones económicas (17 %).', 'La jornada vespertina pierde el doble que la diurna en abril.'],
+          accion: ['Preguntar a Sivax por los retractos', 'asistente.html?q=' + encodeURIComponent('¿Cuántos retractos hubo en marzo y abril?')],
+          grafico: 'g-problema'
+        },
+        {
+          id: 'sede', q: '¿Qué sede no lo está haciendo bien y por qué?',
+          corta: 'Sede Norte: retiene igual que Sur, pero gestiona solo 58 % de su lista semanal contra 81 % en Sur.',
+          estado: 'mal',
+          porque: ['En Norte, solo 46 % de los casos de prioridad 1 recibe un contacto en las primeras 48 horas (Sur: 79 %).', 'Norte tiene 2 tutores para 352 estudiantes de primer año; Sur tiene 3 para 354.', 'Si sigue así, Norte va a quedar bajo Sur en marzo: sus casos de riesgo alto crecieron 4 semanas seguidas.'],
+          accion: ['Ver la lista de la Sede Norte', 'lista.html'],
+          grafico: 'g-sede'
+        },
+        {
+          id: 'carrera', q: '¿En qué carrera nos tenemos que enfocar?',
+          corta: 'Electricidad Industrial: está bajo la meta en las dos sedes y tiene la mayor proporción de estudiantes en riesgo.',
+          estado: 'mal',
+          porque: ['Retención 62,7 % en Norte y 65,1 % en Sur, contra la meta de 68 %.', '27 % de quienes siguen están en riesgo crítico, alto o medio, casi el doble del promedio.', 'Construcción Civil viene detrás y también está bajo la meta en las dos sedes.'],
+          accion: ['Ver Electricidad en el campus 3D', 'campus3d.html?carrera=' + encodeURIComponent('Electricidad Industrial')],
+          grafico: 'g-carrera'
+        },
+        {
+          id: 'efectivos', q: '¿Los contactos son realmente efectivos?',
+          corta: 'Sí, cuando terminan en un acuerdo: el 81 % de los contactados en riesgo sigue, contra 63 % de los no contactados.',
+          estado: 'bien',
+          porque: ['Se comparan estudiantes con el mismo nivel de riesgo al inicio, para que la diferencia no sea por quién era más fácil.', 'Una llamada sin acuerdo casi no cambia nada (66 %); una derivación a tutoría a la que el estudiante asiste sube la asistencia 9 puntos en 4 semanas.', 'De 412 contactos registrados este semestre, 268 fueron efectivos (65 %).'],
+          accion: ['Preguntar a Sivax qué acción funciona mejor', 'asistente.html'],
+          grafico: 'g-efectivos'
+        },
+        {
+          id: 'reales', q: '¿Los contactos que se registran son reales?',
+          corta: 'En su mayoría sí: 91 % de los registros pasa las 4 revisiones. Hay 2 personas con registros para revisar.',
+          estado: 'atencion',
+          porque: ['Sivax no acusa a nadie: marca registros que conviene revisar, y la coordinación decide.', 'Las 4 revisiones: el estudiante confirma el contacto en una encuesta de una pregunta, el registro tiene nota, no hay muchos registros en pocos minutos y está dentro del horario.', 'La confirmación del estudiante es la prueba más fuerte: 87 % confirma haber sido contactado.'],
+          accion: ['Ver la bitácora de atenciones', 'ficha.html'],
+          grafico: 'g-reales'
+        },
+        {
+          id: 'coherente', q: '¿Cómo sabemos si el seguimiento es coherente?',
+          corta: 'A medias: 64 % de los casos de prioridad 1 tiene un segundo contacto dentro de 14 días.',
+          estado: 'atencion',
+          porque: ['Un seguimiento coherente tiene tres pasos: primer contacto, acuerdo y verificación de que el acuerdo se cumplió.', '27 estudiantes quedaron derivados a tutoría y nadie revisó si asistieron.', 'El mapa muestra las gestiones por semana de cada responsable: las semanas en blanco son casos que se enfriaron.'],
+          accion: ['Ver los casos sin verificación', 'lista.html'],
+          grafico: 'g-coherente'
+        },
+        {
+          id: 'ayudar', q: '¿Cómo ayudamos y qué hacemos?',
+          corta: 'Para cada situación, Sivax recomienda la acción que mejor resultado ha dado aquí y en las guías de buenas prácticas.',
+          estado: 'bien',
+          porque: [],
+          accion: ['Preguntar a Sivax', 'asistente.html'],
+          grafico: null
+        }
+      ];
+
+      var EST = {
+        bien: ['Bien', 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 border-emerald-500/30'],
+        atencion: ['Atención', 'bg-amber-500/15 text-amber-800 dark:text-amber-300 border-amber-500/30'],
+        mal: ['Problema', 'bg-red-500/10 text-red-700 dark:text-red-300 border-red-500/30']
+      };
+
+      document.getElementById('indice').innerHTML = P.map(function (p, i) {
+        return '<li><a href="#' + p.id + '" class="flex gap-2 px-2 py-1.5 rounded-md hover:bg-slate-100 dark:hover:bg-white/5 text-slate-700 dark:text-slate-200"><span class="font-mono-num sx-subtle w-4 shrink-0">' + (i + 1) + '</span><span>' + p.q + '</span></a></li>';
+      }).join('');
+
+      document.getElementById('cortas').innerHTML = P.map(function (p, i) {
+        var e = EST[p.estado];
+        return '<a href="#' + p.id + '" class="flex gap-3 items-start bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-lg p-3 hover:border-sivax dark:hover:border-sivax-tint">' +
+          '<span class="font-mono-num text-[12px] sx-subtle w-4 shrink-0 pt-0.5">' + (i + 1) + '</span>' +
+          '<span class="min-w-0"><span class="block text-[12.5px] sx-muted">' + p.q + '</span><span class="block text-[13.5px] font-semibold text-slate-900 dark:text-white mt-0.5 leading-snug">' + p.corta + '</span></span>' +
+          '<span class="ml-auto shrink-0 text-[10.5px] font-semibold px-1.5 py-0.5 rounded border ' + e[1] + '">' + e[0] + '</span></a>';
+      }).join('');
+
+      document.getElementById('secciones').innerHTML = P.map(function (p, i) {
+        var e = EST[p.estado];
+        var cuerpo = p.grafico
+          ? '<div class="grid grid-cols-1 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-5"><div class="min-w-0"><div id="' + p.grafico + '" class="h-72 w-full"></div>' + (p.id === 'reales' ? '<div id="t-reales" class="mt-3 overflow-x-auto"></div>' : '') + '</div>' +
+            '<div><h3 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle">Por qué</h3><ul class="mt-2 space-y-2 text-[13.5px] text-slate-700 dark:text-slate-200">' + p.porque.map(function (x) { return '<li class="flex gap-2"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-sivax dark:bg-sivax-tint shrink-0"></span><span>' + x + '</span></li>'; }).join('') + '</ul>' +
+            '<a href="' + p.accion[1] + '" class="mt-4 inline-flex btn-sivax px-3.5 py-2 rounded-lg text-[13px] font-semibold">' + p.accion[0] + ' →</a></div></div>'
+          : '<div id="ayudar-cuerpo"></div>';
+        return '<section id="' + p.id + '" class="scroll-mt-16 bg-white dark:bg-sivax-darksurface border border-slate-200 dark:border-white/10 rounded-xl p-5">' +
+          '<div class="flex items-start justify-between gap-3"><div class="min-w-0"><p class="font-mono-num text-[11px] sx-subtle">Pregunta ' + (i + 1) + '</p><h2 class="font-display text-lg font-semibold text-slate-900 dark:text-white mt-0.5">' + p.q + '</h2></div>' +
+          '<span class="shrink-0 text-[11px] font-semibold px-2 py-0.5 rounded border ' + e[1] + '">' + e[0] + '</span></div>' +
+          '<p class="mt-2 mb-4 text-[15px] font-semibold text-slate-900 dark:text-white leading-snug max-w-[75ch]">' + p.corta + '</p>' + cuerpo + '</section>';
+      }).join('');
+
+      // ---------- Pregunta 6: tabla por responsable ----------
+      var REV = [
+        ['Felipe Lagos', 96, 93, 0, 1],
+        ['Paula Ríos', 88, 90, 1, 0],
+        ['Rodrigo Castro', 94, 92, 0, 0],
+        ['Daniela Fuentes', 71, 64, 9, 4],
+        ['Ignacio Vera', 79, 72, 6, 7]
+      ];
+      document.getElementById('t-reales').innerHTML = '<table class="w-full text-[12.5px] border-collapse"><thead><tr class="text-left text-[11px] uppercase tracking-wider sx-subtle border-b border-slate-200 dark:border-white/10"><th class="py-1.5 pr-2">Responsable</th><th class="py-1.5 px-2 text-right">Pasa las 4 revisiones</th><th class="py-1.5 px-2 text-right">El estudiante confirma</th><th class="py-1.5 px-2 text-right">En ráfaga</th><th class="py-1.5 pl-2 text-right">Sin nota</th></tr></thead><tbody>' +
+        REV.map(function (r) {
+          var rev = r[1] < 85;
+          return '<tr class="border-b border-slate-100 dark:border-white/5"><td class="py-1.5 pr-2 text-slate-900 dark:text-white">' + r[0] + (rev ? ' <span class="ml-1 text-[10.5px] font-semibold px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-800 dark:text-amber-300">Revisar</span>' : '') + '</td>' +
+            '<td class="py-1.5 px-2 text-right font-mono-num ' + (rev ? 'text-amber-700 dark:text-amber-300 font-semibold' : '') + '">' + r[1] + ' %</td><td class="py-1.5 px-2 text-right font-mono-num">' + r[2] + ' %</td><td class="py-1.5 px-2 text-right font-mono-num">' + r[3] + '</td><td class="py-1.5 pl-2 text-right font-mono-num">' + r[4] + '</td></tr>';
+        }).join('') + '</tbody></table><p class="mt-1.5 text-[11.5px] sx-subtle">«En ráfaga»: 5 o más registros en menos de 10 minutos. Nombres inventados.</p>';
+
+      // ---------- Pregunta 8: acciones y biblioteca ----------
+      var PLAY = [
+        ['Falta a clases en las primeras 3 semanas', 'Llamada el mismo día y acuerdo de asistencia a la próxima clase', '78 % vuelve a asistir', 'Guía de acompañamiento de primer año'],
+        ['Una o más notas bajo 4,0', 'Derivar a tutoría de la asignatura y verificar asistencia a la semana', '+0,6 de promedio en la siguiente nota', 'Buenas prácticas de tutoría entre pares'],
+        ['Dificultad económica declarada', 'Derivar a bienestar en 48 horas para revisar beneficios', '84 % sigue al cierre del semestre', 'Protocolo de derivación a bienestar'],
+        ['No contesta 2 veces', 'Correo institucional + mensaje de la jefatura de carrera', '41 % responde en 7 días', 'Protocolo de llamada de retención'],
+        ['Duda vocacional', 'Entrevista con la jefatura de carrera y revisión de cambio interno', '52 % se cambia en vez de retirarse', 'Guía de orientación vocacional']
+      ];
+      var DOCS = [
+        ['Guía de acompañamiento de primer año', 'PDF · 24 páginas', 'Indexado'],
+        ['Protocolo de llamada de retención', 'Word · 6 páginas', 'Indexado'],
+        ['Buenas prácticas de tutoría entre pares', 'PDF · 31 páginas', 'Indexado'],
+        ['Protocolo de derivación a bienestar', 'PDF · 9 páginas', 'Indexado'],
+        ['Guía de orientación vocacional', 'PDF · 18 páginas', 'Procesando']
+      ];
+      document.getElementById('ayudar-cuerpo').innerHTML =
+        '<h3 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle">Qué hacer según la situación</h3>' +
+        '<div class="mt-2 overflow-x-auto"><table class="w-full text-[13px] border-collapse"><thead><tr class="text-left text-[11px] uppercase tracking-wider sx-subtle border-b border-slate-200 dark:border-white/10"><th class="py-2 pr-3">Situación</th><th class="py-2 px-3">Acción que más funciona</th><th class="py-2 px-3">Resultado aquí</th><th class="py-2 pl-3">Fuente</th></tr></thead><tbody>' +
+        PLAY.map(function (r) { return '<tr class="border-b border-slate-100 dark:border-white/5 align-top"><td class="py-2 pr-3 font-semibold text-slate-900 dark:text-white">' + r[0] + '</td><td class="py-2 px-3 text-slate-700 dark:text-slate-200">' + r[1] + '</td><td class="py-2 px-3 font-mono-num text-emerald-700 dark:text-emerald-300 whitespace-nowrap">' + r[2] + '</td><td class="py-2 pl-3 sx-muted">' + r[3] + '</td></tr>'; }).join('') +
+        '</tbody></table></div>' +
+        '<div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-5">' +
+          '<div><h3 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle">Biblioteca de buenas prácticas</h3>' +
+          '<p class="text-[13px] sx-muted mt-1">El asistente lee estos documentos dentro de la institución y los cita cuando recomienda algo.</p>' +
+          '<ul class="mt-3 divide-y divide-slate-200 dark:divide-white/10 border border-slate-200 dark:border-white/10 rounded-lg text-[13px]">' +
+          DOCS.map(function (d) { var ok = d[2] === 'Indexado'; return '<li class="flex items-center justify-between gap-2 px-3 py-2"><span class="min-w-0"><span class="block text-slate-900 dark:text-white truncate">' + d[0] + '</span><span class="block text-[11.5px] sx-subtle">' + d[1] + '</span></span><span class="shrink-0 text-[11px] font-semibold px-1.5 py-0.5 rounded ' + (ok ? 'bg-emerald-500/10 text-emerald-700 dark:text-emerald-300' : 'bg-slate-100 dark:bg-white/10 sx-muted') + '">' + d[2] + '</span></li>'; }).join('') +
+          '</ul><button type="button" id="subir" class="mt-2 w-full px-3 py-2.5 rounded-lg border border-dashed border-slate-300 dark:border-white/20 text-[13px] font-semibold sx-brand-text hover:bg-slate-50 dark:hover:bg-white/5">Agregar documento (PDF o Word)</button></div>' +
+          '<div><h3 class="text-[11px] font-semibold uppercase tracking-wider sx-subtle">Cómo aprende el asistente</h3>' +
+          '<ol class="mt-3 space-y-3 text-[13.5px]">' +
+            '<li><p class="font-semibold text-slate-900 dark:text-white">1. Lee las guías</p><p class="sx-muted">Cada documento se divide en trozos y se guarda en la base de la institución. Al preguntar, busca los trozos que sirven y los cita.</p></li>' +
+            '<li><p class="font-semibold text-slate-900 dark:text-white">2. Mira qué pasó después</p><p class="sx-muted">Cada atención queda unida a lo que pasó 4 semanas después: si volvió a clases, si subió la nota, si sigue matriculado.</p></li>' +
+            '<li><p class="font-semibold text-slate-900 dark:text-white">3. Recomienda y explica</p><p class="sx-muted">Para cada caso propone la acción con mejor resultado aquí, dice en qué se basa y avisa cuando hay pocos casos para estar seguro.</p></li>' +
+          '</ol></div>' +
+        '</div>' +
+        '<a href="asistente.html" class="mt-5 inline-flex btn-sivax px-3.5 py-2 rounded-lg text-[13px] font-semibold">Preguntar a Sivax por un caso →</a>';
+      document.getElementById('subir').addEventListener('click', function () { this.textContent = 'En la maqueta no se suben archivos. En Sivax, el documento se indexa en unos minutos.'; });
+
+      // ---------- Graficos ----------
+      var charts = [];
+      function pal() {
+        var d = document.documentElement.classList.contains('dark');
+        return { d: d, txt: d ? '#f3f2fb' : '#111322', mut: d ? '#b3add4' : '#52586c', grid: d ? 'rgba(255,255,255,.09)' : 'rgba(15,23,42,.08)', brand: d ? '#a99cfa' : '#2d1b8f', gris: d ? '#6b6596' : '#b8bdcc', rojo: d ? '#f87171' : '#dc2626', naranja: d ? '#fb923c' : '#ea580c', verde: d ? '#4ade80' : '#16a34a', amar: d ? '#facc15' : '#ca8a04', tip: d ? '#26165c' : '#fff' };
+      }
+      function base(c) {
+        return { textStyle: { fontFamily: 'Source Sans 3, sans-serif', color: c.mut }, animationDuration: 500, tooltip: { trigger: 'axis', backgroundColor: c.tip, borderColor: c.grid, textStyle: { color: c.txt } }, grid: { left: 8, right: 16, top: 36, bottom: 8, containLabel: true }, legend: { top: 0, left: 0, textStyle: { color: c.mut }, itemWidth: 14, itemHeight: 8 } };
+      }
+      var ax = function (c, extra) { return Object.assign({ axisLine: { lineStyle: { color: c.grid } }, axisTick: { show: false }, axisLabel: { color: c.mut, fontFamily: 'IBM Plex Mono, monospace', fontSize: 11 }, splitLine: { lineStyle: { color: c.grid } } }, extra || {}); };
+      var MES = ['Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov'];
+      function dibujar() {
+        if (!window.echarts) return;
+        charts.forEach(function (x) { x.dispose(); }); charts = [];
+        var c = pal(), mk = function (id, opt) { var el = document.getElementById(id); if (!el || !el.clientWidth) return; var ch = echarts.init(el); ch.setOption(Object.assign(base(c), opt)); charts.push(ch); };
+        mk('g-anio', {
+          xAxis: ax(c, { type: 'category', data: MES, splitLine: { show: false } }),
+          yAxis: ax(c, { type: 'value', min: 65, max: 100, axisLabel: { color: c.mut, formatter: '{value} %', fontFamily: 'IBM Plex Mono, monospace', fontSize: 11 } }),
+          series: [
+            { name: '2026', type: 'line', data: [93.5, 85.7, 82.3, 79.9, 77.8, 76.6, 75.6, 74.8, 74.2], symbolSize: 7, lineStyle: { width: 3, color: c.brand }, itemStyle: { color: c.brand }, endLabel: { show: true, formatter: '74,2 %', color: c.brand, fontFamily: 'IBM Plex Mono, monospace' } },
+            { name: '2025', type: 'line', data: [92.8, 83.9, 80.2, 77.9, 75.9, 74.6, 73.6, 72.9, 72.4], symbolSize: 5, lineStyle: { width: 2, type: 'dashed', color: c.gris }, itemStyle: { color: c.gris }, endLabel: { show: true, formatter: '72,4 %', color: c.mut, fontFamily: 'IBM Plex Mono, monospace' } },
+            { name: 'Meta', type: 'line', data: MES.map(function () { return 68; }), symbol: 'none', lineStyle: { width: 1, color: c.rojo, type: 'dotted' }, itemStyle: { color: c.rojo } }
+          ],
+          grid: { left: 8, right: 60, top: 36, bottom: 8, containLabel: true }
+        });
+        mk('g-problema', {
+          xAxis: ax(c, { type: 'category', data: MES, splitLine: { show: false } }),
+          yAxis: ax(c, { type: 'value' }),
+          series: [
+            { name: '2026', type: 'bar', data: [46, 55, 24, 17, 15, 9, 7, 6, 3], itemStyle: { color: function (p) { return p.dataIndex < 2 ? c.rojo : c.brand; }, borderRadius: [3, 3, 0, 0] }, barMaxWidth: 22 },
+            { name: '2025', type: 'bar', data: [50, 63, 26, 16, 14, 9, 7, 5, 4], itemStyle: { color: c.gris, borderRadius: [3, 3, 0, 0] }, barMaxWidth: 22 }
+          ]
+        });
+        mk('g-sede', {
+          legend: { top: 0, left: 0, textStyle: { color: c.mut } },
+          xAxis: ax(c, { type: 'category', data: ['Retención\n1.er año', 'Lista\ngestionada', 'Prioridad 1\nen 48 h', '2.º contacto\nen 14 días'], axisLabel: { color: c.mut, fontSize: 11, interval: 0 }, splitLine: { show: false } }),
+          yAxis: ax(c, { type: 'value', max: 100, axisLabel: { color: c.mut, formatter: '{value} %', fontFamily: 'IBM Plex Mono, monospace', fontSize: 11 } }),
+          series: [
+            { name: 'Sede Norte', type: 'bar', data: [74.1, 58, 46, 52], itemStyle: { color: c.naranja, borderRadius: [3, 3, 0, 0] }, label: { show: true, position: 'top', color: c.mut, fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, formatter: function (p) { return String(p.value).replace('.', ','); } }, barMaxWidth: 28 },
+            { name: 'Sede Sur', type: 'bar', data: [74.3, 81, 79, 76], itemStyle: { color: c.brand, borderRadius: [3, 3, 0, 0] }, label: { show: true, position: 'top', color: c.mut, fontFamily: 'IBM Plex Mono, monospace', fontSize: 11, formatter: function (p) { return String(p.value).replace('.', ','); } }, barMaxWidth: 28 }
+          ]
+        });
+        var CAR = [['Electricidad', 'N', 62.7, 27, 59], ['Electricidad', 'S', 65.1, 26, 63], ['Construcción', 'N', 66.0, 21, 53], ['Construcción', 'S', 67.4, 21, 43], ['Informática', 'N', 70.8, 19, 65], ['Informática', 'S', 72.4, 21, 76], ['Logística', 'S', 74.0, 16, 50], ['Logística', 'N', 75.9, 16, 54], ['Administración', 'N', 77.2, 15, 57], ['Administración', 'S', 78.1, 14, 73], ['Enfermería', 'S', 89.8, 9, 49], ['Enfermería', 'N', 90.6, 10, 64]];
+        mk('g-carrera', {
+          legend: { show: false },
+          tooltip: { trigger: 'item', backgroundColor: c.tip, borderColor: c.grid, textStyle: { color: c.txt }, formatter: function (p) { var d = p.data; return d[3] + ' (' + (d[4] === 'N' ? 'Norte' : 'Sur') + ')<br>Retención ' + String(d[0]).replace('.', ',') + ' %<br>En riesgo ' + d[1] + ' %<br>Matrícula ' + d[2]; } },
+          xAxis: ax(c, { type: 'value', name: 'Retención', nameLocation: 'middle', nameGap: 26, nameTextStyle: { color: c.mut }, min: 60, max: 95, axisLabel: { color: c.mut, formatter: '{value} %', fontFamily: 'IBM Plex Mono, monospace', fontSize: 11 } }),
+          yAxis: ax(c, { type: 'value', name: 'En riesgo', nameTextStyle: { color: c.mut }, min: 5, max: 30, axisLabel: { color: c.mut, formatter: '{value} %', fontFamily: 'IBM Plex Mono, monospace', fontSize: 11 } }),
+          grid: { left: 8, right: 24, top: 30, bottom: 30, containLabel: true },
+          series: [{
+            type: 'scatter', data: CAR.map(function (r) { return [r[2], r[3], r[4], r[0], r[1]]; }),
+            symbolSize: function (d) { return 8 + d[2] / 4; },
+            itemStyle: { color: function (p) { return p.data[0] < 68 ? c.rojo : c.brand; }, opacity: 0.85 },
+            label: { show: true, formatter: function (p) { return /^Electricidad/.test(p.data[3]) ? 'Electricidad ' + p.data[4] : ''; }, position: 'right', color: c.txt, fontSize: 11 }, labelLayout: function (p) { return p.dataIndex === 0 ? { dy: -10 } : { dy: 8 }; },
+            markLine: { symbol: 'none', silent: true, lineStyle: { color: c.rojo, type: 'dashed' }, label: { formatter: 'Meta 68 %', color: c.rojo, fontFamily: 'IBM Plex Mono, monospace', fontSize: 10 }, data: [{ xAxis: 68 }] },
+            markArea: { silent: true, itemStyle: { color: c.d ? 'rgba(248,113,113,.08)' : 'rgba(220,38,38,.05)' }, data: [[{ xAxis: 60, yAxis: 18 }, { xAxis: 68, yAxis: 30 }]] }
+          }]
+        });
+        mk('g-efectivos', {
+          legend: { show: false },
+          xAxis: ax(c, { type: 'value', max: 100, axisLabel: { color: c.mut, formatter: '{value} %', fontFamily: 'IBM Plex Mono, monospace', fontSize: 11 } }),
+          yAxis: ax(c, { type: 'category', inverse: true, data: ['No contactados', 'Llamada sin acuerdo', 'Llamada con acuerdo', 'Tutoría con asistencia verificada'], axisLabel: { color: c.txt, fontSize: 12 }, splitLine: { show: false } }),
+          grid: { left: 8, right: 40, top: 28, bottom: 8, containLabel: true },
+          title: { text: 'Siguen matriculados, entre estudiantes que partieron en riesgo alto', textStyle: { color: c.mut, fontSize: 12, fontWeight: 'normal', fontFamily: 'Source Sans 3, sans-serif' }, left: 0, top: 0 },
+          series: [{ type: 'bar', data: [63, 66, 81, 88], itemStyle: { color: function (p) { return [c.gris, c.amar, c.brand, c.verde][p.dataIndex]; }, borderRadius: [0, 4, 4, 0] }, barMaxWidth: 22, label: { show: true, position: 'right', formatter: '{c} %', color: c.mut, fontFamily: 'IBM Plex Mono, monospace' } }]
+        });
+        mk('g-reales', {
+          xAxis: ax(c, { type: 'category', data: ['S38', 'S39', 'S40', 'S41', 'S42', 'S43', 'S44', 'S45', 'S46', 'S47'], splitLine: { show: false } }),
+          yAxis: ax(c, { type: 'value', name: 'Registros', nameTextStyle: { color: c.mut } }),
+          series: [
+            { name: 'Pasa las 4 revisiones', type: 'bar', stack: 't', data: [31, 38, 35, 42, 39, 44, 41, 47, 45, 43], itemStyle: { color: c.verde }, barMaxWidth: 26 },
+            { name: 'Para revisar', type: 'bar', stack: 't', data: [3, 4, 2, 5, 4, 3, 6, 4, 5, 4], itemStyle: { color: c.amar, borderRadius: [3, 3, 0, 0] }, barMaxWidth: 26 },
+            { name: 'El estudiante confirma', type: 'line', yAxisIndex: 0, data: [28, 34, 30, 38, 35, 39, 36, 42, 40, 38], symbolSize: 5, lineStyle: { color: c.brand, width: 2 }, itemStyle: { color: c.brand } }
+          ]
+        });
+        var SEM = ['S38', 'S39', 'S40', 'S41', 'S42', 'S43', 'S44', 'S45', 'S46', 'S47'];
+        var HM = [[9, 11, 8, 12, 10, 9, 11, 13, 12, 10], [7, 9, 10, 0, 0, 8, 9, 7, 11, 9], [10, 8, 9, 11, 10, 12, 9, 10, 8, 11], [4, 6, 0, 0, 0, 5, 3, 0, 6, 4], [5, 0, 7, 6, 0, 0, 4, 6, 0, 5]];
+        var datosHM = []; HM.forEach(function (fila, i) { fila.forEach(function (v, j) { datosHM.push([j, i, v]); }); });
+        mk('g-coherente', {
+          legend: { show: false },
+          tooltip: { trigger: 'item', backgroundColor: c.tip, borderColor: c.grid, textStyle: { color: c.txt }, formatter: function (p) { return NOMBRES[p.data[1]] + ' · ' + SEM[p.data[0]] + '<br>' + p.data[2] + ' gestiones'; } },
+          grid: { left: 8, right: 8, top: 8, bottom: 40, containLabel: true },
+          xAxis: ax(c, { type: 'category', data: SEM, splitArea: { show: false }, splitLine: { show: false } }),
+          yAxis: ax(c, { type: 'category', data: NOMBRES, axisLabel: { color: c.txt, fontSize: 12 }, splitLine: { show: false } }),
+          visualMap: { min: 0, max: 13, calculable: false, orient: 'horizontal', left: 'center', bottom: 0, itemWidth: 10, itemHeight: 120, text: ['13', '0 gestiones'], textStyle: { color: c.mut, fontSize: 11 }, inRange: { color: c.d ? ['#1e104b', '#5b46e8', '#a99cfa'] : ['#ffffff', '#c7c0f5', '#2d1b8f'] } },
+          series: [{ type: 'heatmap', data: datosHM, label: { show: true, color: c.mut, fontFamily: 'IBM Plex Mono, monospace', fontSize: 10, formatter: function (p) { return p.data[2] || '·'; } }, itemStyle: { borderColor: c.d ? '#160a3a' : '#f6f7fa', borderWidth: 2, borderRadius: 3 } }]
+        });
+      }
+      window.addEventListener('sivax:theme', dibujar);
+      window.addEventListener('resize', function () { charts.forEach(function (x) { x.resize(); }); });
+      window.SIVAX_UI.initTheme();
+      dibujar();
+    })();
+  </script>
+
+<nav class="lg:hidden fixed bottom-0 inset-x-0 z-40 flex bg-white/95 dark:bg-sivax-darksurface/95 backdrop-blur border-t border-slate-200 dark:border-white/10" aria-label="Navegación móvil"><a href="inicio.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Inicio</a><a href="buscar.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a><a href="asistente.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l1.8 4.6L18 9l-4.2 1.4L12 15l-1.8-4.6L6 9l4.2-1.4z"/><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/></svg>Preguntar</a><a href="lista.html" class="flex-1 flex flex-col items-center gap-0.5 py-2 text-[11px] sx-muted"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 5h11M9 12h11M9 19h11M4 5h.01M4 12h.01M4 19h.01"/></svg>Lista</a></nav>
+</body>
+</html>
